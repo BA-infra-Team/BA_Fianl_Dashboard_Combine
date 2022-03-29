@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="BA_Dashboard.row_0_col_1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BA_Dashboard"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+        <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="0 0 0 1">
+        </Border>
+
+
+        <Label Grid.Row="0" Content="Total Files Count" HorizontalAlignment="Left" Margin="79,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.956,0.757" FontSize="18"/>
+                <Label Grid.Row="1" Content="Total Error Count" HorizontalAlignment="Left" Margin="79,10,0,0" VerticalAlignment="Top" FontSize="18"/>
+                <TextBox HorizontalAlignment="Left" Margin="79,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="194" Height="59" />
+                <TextBox Grid.Row="1" HorizontalAlignment="Left" Margin="79,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="194" Height="59" />
+                <ComboBox HorizontalAlignment="Left" Margin="467,0,0,0" VerticalAlignment="Center" Width="194" Height="59"/>
+                <ComboBox HorizontalAlignment="Left" Margin="467,0,0,0" VerticalAlignment="Center" Width="194" Height="59" Grid.Row="1"/>
+        </Grid>
+</UserControl>
