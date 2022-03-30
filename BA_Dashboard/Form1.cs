@@ -63,6 +63,33 @@ namespace BA_Dashboard
             InitializeComponent();
 
         }
+
+        // 홈 버튼
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // 서치 버튼
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var FilterForm = new FilterForm();
+            FilterForm.Show();
+        }
+
+        // 차트 버튼
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var Statistics = new StatisticsForm();
+            Statistics.Show();
+        }
+
+        // 에러 버튼 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var ErrorReport = new ErrorReportForm();
+            ErrorReport.Show();
+        }
     }
 
     public class ChartData
@@ -85,8 +112,6 @@ namespace BA_Dashboard
         public static int Total_Backup_Count_LineChart_2022_02_13_Completed_Count;
         public static int Total_Backup_Count_LineChart_2022_02_14_Completed_Count;
         public static int Total_Backup_Count_LineChart_2022_02_15_Completed_Count;
-
-
 
         // 파일통계화면 UI, 파일 관련 통계를 보여줄 데이터 구조체 선언 
         public static int File_Statistics_PieChart_Data_Transferred;
@@ -116,6 +141,16 @@ namespace BA_Dashboard
         public static int Total_Error_Ratio_PieChart_Total_Count;
         public static int Total_Error_Ratio_PieChart_Total_Completed_Count;
         public static int Total_Error_Ratio_PieChart_Total_Error_Count;
+
+        // 일별 에러 체크 
+        public static int Error_02_08_Count;
+        public static int Error_02_09_Count;
+        public static int Error_02_10_Count;
+        public static int Error_02_11_Count;
+        public static int Error_02_12_Count;
+        public static int Error_02_13_Count;
+        public static int Error_02_14_Count;
+        public static int Error_02_15_Count;
 
         // 에러 UI, 작업 종류별 에러타입을 위한 데이터 구조체 선언 
         public static int Error_Ratio_By_Job_Status_PieChart_Total_Error_Count;
@@ -213,6 +248,16 @@ namespace BA_Dashboard
             Total_Error_Ratio_PieChart_Total_Count = bRead.ReadInt32();
             Total_Error_Ratio_PieChart_Total_Completed_Count = bRead.ReadInt32();
             Total_Error_Ratio_PieChart_Total_Error_Count = bRead.ReadInt32();
+
+            // 일별 에러 카운트
+            Error_02_08_Count = bRead.ReadInt32();
+            Error_02_09_Count = bRead.ReadInt32();
+            Error_02_10_Count = bRead.ReadInt32();
+            Error_02_11_Count = bRead.ReadInt32();
+            Error_02_12_Count = bRead.ReadInt32();
+            Error_02_13_Count = bRead.ReadInt32();
+            Error_02_14_Count = bRead.ReadInt32();
+            Error_02_15_Count = bRead.ReadInt32();
 
             // 에러 UI, 작업 종류별 에러타입을 위한 데이터 구조체 선언 
             Error_Ratio_By_Job_Status_PieChart_Total_Error_Count = bRead.ReadInt32();

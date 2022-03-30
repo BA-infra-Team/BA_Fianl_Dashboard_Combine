@@ -49,7 +49,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.PanelContainer = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.row_0_col_01 = new BA_Dashboard.row_0_col_0();
@@ -65,7 +65,7 @@
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.PanelContainer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,6 +181,7 @@
             this.button7.Size = new System.Drawing.Size(42, 28);
             this.button7.TabIndex = 4;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label6
             // 
@@ -204,6 +205,7 @@
             this.button1.Size = new System.Drawing.Size(42, 28);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -227,6 +229,7 @@
             this.button5.Size = new System.Drawing.Size(42, 28);
             this.button5.TabIndex = 2;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label4
             // 
@@ -250,6 +253,7 @@
             this.button6.Size = new System.Drawing.Size(42, 28);
             this.button6.TabIndex = 3;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label3
             // 
@@ -308,15 +312,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "대시보드";
             // 
-            // panel4
+            // PanelContainer
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.tableLayoutPanel1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(200, 122);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1644, 839);
-            this.panel4.TabIndex = 3;
+            this.PanelContainer.BackColor = System.Drawing.Color.White;
+            this.PanelContainer.Controls.Add(this.tableLayoutPanel1);
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContainer.Location = new System.Drawing.Point(200, 122);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(1644, 839);
+            this.PanelContainer.TabIndex = 3;
             // 
             // tableLayoutPanel1
             // 
@@ -383,7 +387,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1844, 961);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.PanelContainer);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -398,7 +402,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel4.ResumeLayout(false);
+            this.PanelContainer.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -416,7 +420,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel PanelContainer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;

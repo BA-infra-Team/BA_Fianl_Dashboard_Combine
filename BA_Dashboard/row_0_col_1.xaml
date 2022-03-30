@@ -18,11 +18,11 @@
         </Border>
 
 
-        <Label Grid.Row="0" Content="Total Files Count" HorizontalAlignment="Left" Margin="79,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.956,0.757" FontSize="18"/>
-                <Label Grid.Row="1" Content="Total Error Count" HorizontalAlignment="Left" Margin="79,10,0,0" VerticalAlignment="Top" FontSize="18"/>
-                <TextBox HorizontalAlignment="Left" Margin="79,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="194" Height="59" />
-                <TextBox Grid.Row="1" HorizontalAlignment="Left" Margin="79,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="194" Height="59" />
-                <ComboBox HorizontalAlignment="Left" Margin="467,0,0,0" VerticalAlignment="Center" Width="194" Height="59"/>
-                <ComboBox HorizontalAlignment="Left" Margin="467,0,0,0" VerticalAlignment="Center" Width="194" Height="59" Grid.Row="1"/>
+        <Label Grid.Row="0" Content="Total Files Count" HorizontalAlignment="Left" Margin="79,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.956,0.757" FontSize="18" FontWeight="Bold"/>
+                <Label Grid.Row="1" Content="Total Error Count" HorizontalAlignment="Left" Margin="79,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="79,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="194" Height="59" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="16" IsReadOnly="True"/>
+        <TextBox x:Name="textbox2" Grid.Row="1" HorizontalAlignment="Left" Margin="79,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="194" Height="59" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="16" IsReadOnly="True"/>
+        <ComboBox x:Name="ComboBox1" HorizontalAlignment="Left" Margin="467,0,0,0" VerticalAlignment="Center" Width="194" Height="59" Loaded="ComboBox1_Loaded" SelectionChanged="ComboBox1_SelectionChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
+        <ComboBox x:Name="ComboBox2" HorizontalAlignment="Left" Margin="467,0,0,0" VerticalAlignment="Center" Width="194" Height="59" Grid.Row="1" Loaded="ComboBox2_Loaded" SelectionChanged="ComboBox2_SelectionChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
         </Grid>
 </UserControl>
