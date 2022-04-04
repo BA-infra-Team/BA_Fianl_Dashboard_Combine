@@ -51,14 +51,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.elementHost4 = new System.Windows.Forms.Integration.ElementHost();
+            this.row_1_col_11 = new BA_Dashboard.row_1_col_1();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.row_0_col_01 = new BA_Dashboard.row_0_col_0();
             this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
             this.row_0_col_11 = new BA_Dashboard.row_0_col_1();
             this.elementHost3 = new System.Windows.Forms.Integration.ElementHost();
             this.row_1_col_01 = new BA_Dashboard.row_1_col_0();
-            this.elementHost4 = new System.Windows.Forms.Integration.ElementHost();
-            this.row_1_col_11 = new BA_Dashboard.row_1_col_1();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -67,6 +71,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PanelContainer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -329,10 +337,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.elementHost1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.elementHost2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.elementHost3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.elementHost4, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel7, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -342,45 +350,81 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1644, 839);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.elementHost4);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(825, 423);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(815, 412);
+            this.panel4.TabIndex = 5;
+            // 
+            // elementHost4
+            // 
+            this.elementHost4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost4.Location = new System.Drawing.Point(0, 0);
+            this.elementHost4.Name = "elementHost4";
+            this.elementHost4.Size = new System.Drawing.Size(815, 412);
+            this.elementHost4.TabIndex = 0;
+            this.elementHost4.Text = "elementHost4";
+            this.elementHost4.Child = this.row_1_col_11;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.elementHost1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(4, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(814, 412);
+            this.panel5.TabIndex = 6;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.elementHost2);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(825, 4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(815, 412);
+            this.panel6.TabIndex = 7;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.elementHost3);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(4, 423);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(814, 412);
+            this.panel7.TabIndex = 8;
+            // 
             // elementHost1
             // 
             this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost1.Location = new System.Drawing.Point(4, 4);
+            this.elementHost1.Location = new System.Drawing.Point(0, 0);
             this.elementHost1.Name = "elementHost1";
             this.elementHost1.Size = new System.Drawing.Size(814, 412);
-            this.elementHost1.TabIndex = 2;
+            this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.row_0_col_01;
             // 
             // elementHost2
             // 
             this.elementHost2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost2.Location = new System.Drawing.Point(825, 4);
+            this.elementHost2.Location = new System.Drawing.Point(0, 0);
             this.elementHost2.Name = "elementHost2";
             this.elementHost2.Size = new System.Drawing.Size(815, 412);
-            this.elementHost2.TabIndex = 3;
+            this.elementHost2.TabIndex = 0;
             this.elementHost2.Text = "elementHost2";
             this.elementHost2.Child = this.row_0_col_11;
             // 
             // elementHost3
             // 
             this.elementHost3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost3.Location = new System.Drawing.Point(4, 423);
+            this.elementHost3.Location = new System.Drawing.Point(0, 0);
             this.elementHost3.Name = "elementHost3";
             this.elementHost3.Size = new System.Drawing.Size(814, 412);
-            this.elementHost3.TabIndex = 4;
+            this.elementHost3.TabIndex = 0;
             this.elementHost3.Text = "elementHost3";
             this.elementHost3.Child = this.row_1_col_01;
-            // 
-            // elementHost4
-            // 
-            this.elementHost4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost4.Location = new System.Drawing.Point(825, 423);
-            this.elementHost4.Name = "elementHost4";
-            this.elementHost4.Size = new System.Drawing.Size(815, 412);
-            this.elementHost4.TabIndex = 5;
-            this.elementHost4.Text = "elementHost4";
-            this.elementHost4.Child = this.row_1_col_11;
             // 
             // Form1
             // 
@@ -404,6 +448,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PanelContainer.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -432,14 +480,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private row_0_col_0 row_0_col_01;
-        private System.Windows.Forms.Integration.ElementHost elementHost2;
-        private row_0_col_1 row_0_col_11;
-        private System.Windows.Forms.Integration.ElementHost elementHost3;
-        private row_1_col_0 row_1_col_01;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Integration.ElementHost elementHost4;
         private row_1_col_1 row_1_col_11;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Integration.ElementHost elementHost1;
+        private row_0_col_0 row_0_col_01;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Integration.ElementHost elementHost2;
+        private row_0_col_1 row_0_col_11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Integration.ElementHost elementHost3;
+        private row_1_col_0 row_1_col_01;
     }
 }
 
