@@ -73,6 +73,7 @@ namespace BA_Dashboard
             {
                 var MainDashBoard = new Form1();
                 MainDashBoard.Show();
+                //Application.Run(new Form1());
                 //this.Close();
             }
             else

@@ -16,6 +16,7 @@ namespace BA_Dashboard
     public partial class Form1 : Form
     {
         static Form1 _obj;
+        public static Socket ClientSocket;
         public static Form1 Instance
         {
             get
@@ -30,15 +31,22 @@ namespace BA_Dashboard
 
         public Panel row_1_col_1_panel
         {
-            get { return panel4; }
-            set { panel4 = value; }
+            get { return row_1_col_1_Panel; }
+            set { row_1_col_1_Panel = value; }
         }
 
-        public Panel First_Panel
+        public Panel panelcontainer
         {
             get { return PanelContainer; }
             set { PanelContainer = value; }
         }
+
+        public Panel contentpanel
+        {
+            get { return ContentPanel; }
+            set { ContentPanel = value; }
+        }
+
 
         public Form1()
         {
@@ -87,38 +95,67 @@ namespace BA_Dashboard
             bRead.Close();
             InitializeComponent();
 
-        }
-
-        // 홈 버튼
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // 서치 버튼
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // 차트 버튼
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // 에러 버튼 
-        private void button7_Click(object sender, EventArgs e)
-        {
-
+            Chart_UC chart_UC = new Chart_UC();
+            Error_UC error_UC = new Error_UC();
+            Filtering_UC Filter_UC = new Filtering_UC();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             _obj = this;
-            row_1_col_1_Line_UC UChome = new row_1_col_1_Line_UC();
-            UChome.Dock = DockStyle.Fill;
-            panel4.Controls.Add(UChome);
+            row_1_col_1_Line_UC r_1_c_1_UChome = new row_1_col_1_Line_UC();
+            r_1_c_1_UChome.Dock = DockStyle.Fill;
+            row_1_col_1_Panel.Controls.Add(r_1_c_1_UChome);
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            if (!ContentPanel.Controls.ContainsKey("Filtering_UC"))
+            {
+                Filtering_UC Filter_UC = new Filtering_UC();
+                Filter_UC.Dock = DockStyle.Fill;
+                ContentPanel.Controls.Add(Filter_UC);
+            }
+            ContentPanel.Controls["Filtering_UC"].BringToFront();
+        }
+
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+            if (ContentPanel.Controls.ContainsKey("Filtering_UC"))
+            {
+                ContentPanel.Controls["Filtering_UC"].SendToBack();
+            }
+            if (ContentPanel.Controls.ContainsKey("Chart_UC"))
+            {
+                ContentPanel.Controls["Chart_UC"].SendToBack();
+            }
+            if (ContentPanel.Controls.ContainsKey("Error_UC"))
+            {
+                ContentPanel.Controls["Error_UC"].SendToBack();
+            }
+        }
+
+        private void ChartBtn_Click(object sender, EventArgs e)
+        {
+            if (!ContentPanel.Controls.ContainsKey("Chart_UC"))
+            {
+                Chart_UC chart_UC = new Chart_UC();
+                chart_UC.Dock = DockStyle.Fill;
+                ContentPanel.Controls.Add(chart_UC);
+            }
+            ContentPanel.Controls["Chart_UC"].BringToFront();
+        }
+
+        private void ErrorBtn_Click(object sender, EventArgs e)
+        {
+            if (!ContentPanel.Controls.ContainsKey("Error_UC"))
+            {
+                Error_UC error_UC = new Error_UC();
+                error_UC.Dock = DockStyle.Fill;
+                ContentPanel.Controls.Add(error_UC);
+            }
+            ContentPanel.Controls["Error_UC"].BringToFront();
         }
     }
 

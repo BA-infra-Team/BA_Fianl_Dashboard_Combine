@@ -38,44 +38,48 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LeftSidePanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.ErrorBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.HomeBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.SearchBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.ChartBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.ContentPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PanelContainer = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.elementHost3 = new System.Windows.Forms.Integration.ElementHost();
-            this.row_1_col_01 = new BA_Dashboard.row_1_col_0();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
-            this.row_0_col_11 = new BA_Dashboard.row_0_col_1();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.row_1_col_1_Panel = new System.Windows.Forms.Panel();
+            this.row_1_col_1_Line_UC1 = new BA_Dashboard.row_1_col_1_Line_UC();
+            this.row_0_col_0_Panel = new System.Windows.Forms.Panel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.row_0_col_01 = new BA_Dashboard.row_0_col_0();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.row_1_col_1_Line_UC1 = new BA_Dashboard.row_1_col_1_Line_UC();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.row_0_col_1_Panel = new System.Windows.Forms.Panel();
+            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
+            this.row_0_col_11 = new BA_Dashboard.row_0_col_1();
+            this.row_1_col_0_Panel = new System.Windows.Forms.Panel();
+            this.elementHost3 = new System.Windows.Forms.Integration.ElementHost();
+            this.row_1_col_01 = new BA_Dashboard.row_1_col_0();
             this.SecondTopPanel = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.TopPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.LeftSidePanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.ContentPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.PanelContainer.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.row_1_col_1_Panel.SuspendLayout();
+            this.row_0_col_0_Panel.SuspendLayout();
+            this.row_0_col_1_Panel.SuspendLayout();
+            this.row_1_col_0_Panel.SuspendLayout();
             this.SecondTopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -93,9 +97,9 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.25126F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.74874F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button4, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 0, 0);
@@ -103,7 +107,7 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(1570, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(274, 60);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -118,10 +122,10 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(182, 10);
+            this.button2.Location = new System.Drawing.Point(192, 10);
             this.button2.Margin = new System.Windows.Forms.Padding(10);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 40);
+            this.button2.Size = new System.Drawing.Size(72, 40);
             this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -136,10 +140,10 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(96, 10);
+            this.button4.Location = new System.Drawing.Point(101, 10);
             this.button4.Margin = new System.Windows.Forms.Padding(10);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(66, 40);
+            this.button4.Size = new System.Drawing.Size(71, 40);
             this.button4.TabIndex = 5;
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -157,7 +161,7 @@
             this.button3.Location = new System.Drawing.Point(10, 10);
             this.button3.Margin = new System.Windows.Forms.Padding(10);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 40);
+            this.button3.Size = new System.Drawing.Size(71, 40);
             this.button3.TabIndex = 4;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -195,13 +199,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.ErrorBtn);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.HomeBtn);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.SearchBtn);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Controls.Add(this.ChartBtn);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(3, -7);
             this.groupBox1.Name = "groupBox1";
@@ -209,18 +213,18 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
-            // button7
+            // ErrorBtn
             // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(18, 245);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(42, 28);
-            this.button7.TabIndex = 4;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.ErrorBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ErrorBtn.BackgroundImage")));
+            this.ErrorBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ErrorBtn.FlatAppearance.BorderSize = 0;
+            this.ErrorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ErrorBtn.Location = new System.Drawing.Point(18, 245);
+            this.ErrorBtn.Name = "ErrorBtn";
+            this.ErrorBtn.Size = new System.Drawing.Size(42, 28);
+            this.ErrorBtn.TabIndex = 4;
+            this.ErrorBtn.UseVisualStyleBackColor = true;
+            this.ErrorBtn.Click += new System.EventHandler(this.ErrorBtn_Click);
             // 
             // label6
             // 
@@ -233,18 +237,18 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Error";
             // 
-            // button1
+            // HomeBtn
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(18, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 28);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.HomeBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeBtn.BackgroundImage")));
+            this.HomeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.HomeBtn.FlatAppearance.BorderSize = 0;
+            this.HomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HomeBtn.Location = new System.Drawing.Point(18, 33);
+            this.HomeBtn.Name = "HomeBtn";
+            this.HomeBtn.Size = new System.Drawing.Size(42, 28);
+            this.HomeBtn.TabIndex = 1;
+            this.HomeBtn.UseVisualStyleBackColor = true;
+            this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
             // 
             // label5
             // 
@@ -257,18 +261,18 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Chart";
             // 
-            // button5
+            // SearchBtn
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(18, 102);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 28);
-            this.button5.TabIndex = 2;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.SearchBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchBtn.BackgroundImage")));
+            this.SearchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchBtn.FlatAppearance.BorderSize = 0;
+            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchBtn.Location = new System.Drawing.Point(18, 102);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(42, 28);
+            this.SearchBtn.TabIndex = 2;
+            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // label4
             // 
@@ -281,18 +285,18 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Search";
             // 
-            // button6
+            // ChartBtn
             // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(18, 169);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(42, 28);
-            this.button6.TabIndex = 3;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.ChartBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChartBtn.BackgroundImage")));
+            this.ChartBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ChartBtn.FlatAppearance.BorderSize = 0;
+            this.ChartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChartBtn.Location = new System.Drawing.Point(18, 169);
+            this.ChartBtn.Name = "ChartBtn";
+            this.ChartBtn.Size = new System.Drawing.Size(42, 28);
+            this.ChartBtn.TabIndex = 3;
+            this.ChartBtn.UseVisualStyleBackColor = true;
+            this.ChartBtn.Click += new System.EventHandler(this.ChartBtn_Click);
             // 
             // label3
             // 
@@ -305,62 +309,80 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Home";
             // 
+            // ContentPanel
+            // 
+            this.ContentPanel.Controls.Add(this.panel1);
+            this.ContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContentPanel.Location = new System.Drawing.Point(200, 60);
+            this.ContentPanel.Name = "ContentPanel";
+            this.ContentPanel.Size = new System.Drawing.Size(1644, 901);
+            this.ContentPanel.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.PanelContainer);
+            this.panel1.Controls.Add(this.SecondTopPanel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1644, 901);
+            this.panel1.TabIndex = 0;
+            // 
             // PanelContainer
             // 
             this.PanelContainer.BackColor = System.Drawing.Color.White;
             this.PanelContainer.Controls.Add(this.tableLayoutPanel1);
             this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContainer.Location = new System.Drawing.Point(200, 122);
+            this.PanelContainer.Location = new System.Drawing.Point(0, 62);
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Size = new System.Drawing.Size(1644, 839);
-            this.PanelContainer.TabIndex = 3;
+            this.PanelContainer.TabIndex = 7;
             // 
-            // panel7
+            // tableLayoutPanel1
             // 
-            this.panel7.Controls.Add(this.elementHost3);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(4, 423);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(814, 412);
-            this.panel7.TabIndex = 8;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.row_1_col_1_Panel, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.row_0_col_0_Panel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.row_0_col_1_Panel, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.row_1_col_0_Panel, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1644, 839);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // elementHost3
+            // row_1_col_1_Panel
             // 
-            this.elementHost3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost3.Location = new System.Drawing.Point(0, 0);
-            this.elementHost3.Name = "elementHost3";
-            this.elementHost3.Size = new System.Drawing.Size(814, 412);
-            this.elementHost3.TabIndex = 0;
-            this.elementHost3.Text = "elementHost3";
-            this.elementHost3.Child = this.row_1_col_01;
+            this.row_1_col_1_Panel.Controls.Add(this.row_1_col_1_Line_UC1);
+            this.row_1_col_1_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.row_1_col_1_Panel.Location = new System.Drawing.Point(825, 423);
+            this.row_1_col_1_Panel.Name = "row_1_col_1_Panel";
+            this.row_1_col_1_Panel.Size = new System.Drawing.Size(815, 412);
+            this.row_1_col_1_Panel.TabIndex = 5;
             // 
-            // panel6
+            // row_1_col_1_Line_UC1
             // 
-            this.panel6.Controls.Add(this.elementHost2);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(825, 4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(815, 412);
-            this.panel6.TabIndex = 7;
+            this.row_1_col_1_Line_UC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.row_1_col_1_Line_UC1.Location = new System.Drawing.Point(0, 0);
+            this.row_1_col_1_Line_UC1.Name = "row_1_col_1_Line_UC1";
+            this.row_1_col_1_Line_UC1.Size = new System.Drawing.Size(815, 412);
+            this.row_1_col_1_Line_UC1.TabIndex = 0;
             // 
-            // elementHost2
+            // row_0_col_0_Panel
             // 
-            this.elementHost2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost2.Location = new System.Drawing.Point(0, 0);
-            this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(815, 412);
-            this.elementHost2.TabIndex = 0;
-            this.elementHost2.Text = "elementHost2";
-            this.elementHost2.Child = this.row_0_col_11;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.elementHost1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(4, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(814, 412);
-            this.panel5.TabIndex = 6;
+            this.row_0_col_0_Panel.Controls.Add(this.elementHost1);
+            this.row_0_col_0_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.row_0_col_0_Panel.Location = new System.Drawing.Point(4, 4);
+            this.row_0_col_0_Panel.Name = "row_0_col_0_Panel";
+            this.row_0_col_0_Panel.Size = new System.Drawing.Size(814, 412);
+            this.row_0_col_0_Panel.TabIndex = 6;
             // 
             // elementHost1
             // 
@@ -372,64 +394,55 @@
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.row_0_col_01;
             // 
-            // panel4
+            // row_0_col_1_Panel
             // 
-            this.panel4.Controls.Add(this.row_1_col_1_Line_UC1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(825, 423);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(815, 412);
-            this.panel4.TabIndex = 5;
+            this.row_0_col_1_Panel.Controls.Add(this.elementHost2);
+            this.row_0_col_1_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.row_0_col_1_Panel.Location = new System.Drawing.Point(825, 4);
+            this.row_0_col_1_Panel.Name = "row_0_col_1_Panel";
+            this.row_0_col_1_Panel.Size = new System.Drawing.Size(815, 412);
+            this.row_0_col_1_Panel.TabIndex = 7;
             // 
-            // row_1_col_1_Line_UC1
+            // elementHost2
             // 
-            this.row_1_col_1_Line_UC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row_1_col_1_Line_UC1.Location = new System.Drawing.Point(0, 0);
-            this.row_1_col_1_Line_UC1.Name = "row_1_col_1_Line_UC1";
-            this.row_1_col_1_Line_UC1.Size = new System.Drawing.Size(815, 412);
-            this.row_1_col_1_Line_UC1.TabIndex = 0;
+            this.elementHost2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost2.Location = new System.Drawing.Point(0, 0);
+            this.elementHost2.Name = "elementHost2";
+            this.elementHost2.Size = new System.Drawing.Size(815, 412);
+            this.elementHost2.TabIndex = 0;
+            this.elementHost2.Text = "elementHost2";
+            this.elementHost2.Child = this.row_0_col_11;
             // 
-            // tableLayoutPanel1
+            // row_1_col_0_Panel
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel7, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1644, 839);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.row_1_col_0_Panel.Controls.Add(this.elementHost3);
+            this.row_1_col_0_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.row_1_col_0_Panel.Location = new System.Drawing.Point(4, 423);
+            this.row_1_col_0_Panel.Name = "row_1_col_0_Panel";
+            this.row_1_col_0_Panel.Size = new System.Drawing.Size(814, 412);
+            this.row_1_col_0_Panel.TabIndex = 8;
             // 
-            // label2
+            // elementHost3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(203)))));
-            this.label2.Location = new System.Drawing.Point(68, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 27);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "대시보드";
+            this.elementHost3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost3.Location = new System.Drawing.Point(0, 0);
+            this.elementHost3.Name = "elementHost3";
+            this.elementHost3.Size = new System.Drawing.Size(814, 412);
+            this.elementHost3.TabIndex = 0;
+            this.elementHost3.Text = "elementHost3";
+            this.elementHost3.Child = this.row_1_col_01;
             // 
-            // pictureBox2
+            // SecondTopPanel
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(20, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.SecondTopPanel.BackColor = System.Drawing.Color.White;
+            this.SecondTopPanel.Controls.Add(this.button8);
+            this.SecondTopPanel.Controls.Add(this.pictureBox2);
+            this.SecondTopPanel.Controls.Add(this.label2);
+            this.SecondTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SecondTopPanel.Location = new System.Drawing.Point(0, 0);
+            this.SecondTopPanel.Name = "SecondTopPanel";
+            this.SecondTopPanel.Size = new System.Drawing.Size(1644, 62);
+            this.SecondTopPanel.TabIndex = 6;
             // 
             // button8
             // 
@@ -443,25 +456,34 @@
             this.button8.TabIndex = 9;
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // SecondTopPanel
+            // pictureBox2
             // 
-            this.SecondTopPanel.BackColor = System.Drawing.Color.White;
-            this.SecondTopPanel.Controls.Add(this.button8);
-            this.SecondTopPanel.Controls.Add(this.pictureBox2);
-            this.SecondTopPanel.Controls.Add(this.label2);
-            this.SecondTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SecondTopPanel.Location = new System.Drawing.Point(200, 60);
-            this.SecondTopPanel.Name = "SecondTopPanel";
-            this.SecondTopPanel.Size = new System.Drawing.Size(1644, 62);
-            this.SecondTopPanel.TabIndex = 2;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(20, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(203)))));
+            this.label2.Location = new System.Drawing.Point(68, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 27);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "대시보드";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1844, 961);
-            this.Controls.Add(this.PanelContainer);
-            this.Controls.Add(this.SecondTopPanel);
+            this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.LeftSidePanel);
             this.Controls.Add(this.TopPanel);
             this.MinimumSize = new System.Drawing.Size(800, 800);
@@ -477,15 +499,17 @@
             this.LeftSidePanel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.ContentPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.PanelContainer.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.row_1_col_1_Panel.ResumeLayout(false);
+            this.row_0_col_0_Panel.ResumeLayout(false);
+            this.row_0_col_1_Panel.ResumeLayout(false);
+            this.row_1_col_0_Panel.ResumeLayout(false);
             this.SecondTopPanel.ResumeLayout(false);
             this.SecondTopPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -495,37 +519,39 @@
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel LeftSidePanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button HomeBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel PanelContainer;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button ErrorBtn;
+        private System.Windows.Forms.Button ChartBtn;
+        private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Panel ContentPanel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelContainer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel row_1_col_1_Panel;
         private row_1_col_1_Line_UC row_1_col_1_Line_UC1;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel row_0_col_0_Panel;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
         private row_0_col_0 row_0_col_01;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel row_0_col_1_Panel;
         private System.Windows.Forms.Integration.ElementHost elementHost2;
         private row_0_col_1 row_0_col_11;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel row_1_col_0_Panel;
         private System.Windows.Forms.Integration.ElementHost elementHost3;
         private row_1_col_0 row_1_col_01;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel SecondTopPanel;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
     }
 }
 
