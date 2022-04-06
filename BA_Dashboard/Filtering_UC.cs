@@ -36,13 +36,6 @@ namespace BA_Dashboard
             listView1.Columns.Add("Server", 200, HorizontalAlignment.Center);
             listView1.Columns.Add("Schedule", 200, HorizontalAlignment.Center);
             listView1.Columns.Add("Files", 200, HorizontalAlignment.Center);
-            //FormClosing += new FormClosingEventHandler(Form1_FormClosing);
-
-        }
-
-        void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            ClientSocket.Close();
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
@@ -52,11 +45,11 @@ namespace BA_Dashboard
             // 리스트뷰 내용 초기화 
             listView1.Items.Clear();
 
-            // 7755 포트로 서버필터링 접속(나중에 7754인걸로 통일해서 필요없을 코드)
+            //// 7755 포트로 서버필터링 접속(나중에 7754인걸로 통일해서 필요없을 코드)
             try
             {
                 IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
-                int port = 7755;
+                int port = 7756;
                 IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
                 ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
                 ClientSocket.Connect(iPEndPoint);
@@ -93,47 +86,58 @@ namespace BA_Dashboard
 
             // 서버에 필터링 기준 정보를 메세지로 보냄. 
             message = Job_Type;
-            byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
-            ClientSocket.Send(data);
-
-            Buffer = new byte[1024];
-            rev = ClientSocket.Receive(Buffer, 0, 23, 0);
-            if (rev < 0)
+            if(message == "File Backup" || message == "Informix Onbar Backup" || 
+                message == "Mysql Backup" || message == "Oracle RMAN Backup" || 
+                message == "Physical Backup" || message == "Vmware Backup")
             {
-                throw new SocketException();
-            }
-            int fileNameLen = BitConverter.ToInt32(Buffer, 0);
-            fileName = Encoding.ASCII.GetString(Buffer, 4, fileNameLen);
-            int fileSize = BitConverter.ToInt32(Buffer, 4 + fileNameLen + 1);
+                byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
+                ClientSocket.Send(data);
 
-            Buffer = new byte[4096];
-            BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName,
-            FileMode.Create, FileAccess.Write));
-
-            rev = 0;
-            for (int i = 0; i < fileSize; i += rev)
-            {
-                Buffer = new byte[4096];
-                rev = ClientSocket.Receive(Buffer, 0);
+                Buffer = new byte[1024];
+                rev = ClientSocket.Receive(Buffer, 0, 23, 0);
                 if (rev < 0)
                 {
                     throw new SocketException();
                 }
-                bWrite.Write(Buffer, 0, rev);
-            }
-            bWrite.Close();
+                int fileNameLen = BitConverter.ToInt32(Buffer, 0);
+                fileName = Encoding.ASCII.GetString(Buffer, 4, fileNameLen);
+                int fileSize = BitConverter.ToInt32(Buffer, 4 + fileNameLen + 1);
 
-            // csv 파일 읽기
-            ReadCSVFile();
+                Buffer = new byte[4096];
+                BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName,
+                FileMode.Create, FileAccess.Write));
 
-            // 리스트뷰에 내용 추가 
-            for (int i = 0; i < list.Count; i++)
-            {
-                string[] strs = new string[] { list[i].Filtering_FirstBlankColumn,list[i].Filtering_index,list[i].Filtering_Job_Status,
+                rev = 0;
+                for (int i = 0; i < fileSize; i += rev)
+                {
+                    Buffer = new byte[4096];
+                    rev = ClientSocket.Receive(Buffer, 0);
+                    if (rev < 0)
+                    {
+                        throw new SocketException();
+                    }
+                    bWrite.Write(Buffer, 0, rev);
+                }
+                bWrite.Close();
+
+                // csv 파일 읽기
+                ReadCSVFile();
+
+                // 리스트뷰에 내용 추가 
+                for (int i = 0; i < list.Count; i++)
+                {
+                    string[] strs = new string[] { list[i].Filtering_FirstBlankColumn,list[i].Filtering_index,list[i].Filtering_Job_Status,
                 list[i].Filtering_Job_Type, list[i].Filtering_Client, list[i].Filtering_Server,
                 list[i].Filtering_Schedule, list[i].Filtering_Files };
-                var item = new ListViewItem(strs);
-                listView1.Items.Add(item);
+                    var item = new ListViewItem(strs);
+                    listView1.Items.Add(item);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("검색기준에 맞게 입력하세요.");
+                ClientSocket.Close();
             }
         }
 
@@ -169,6 +173,30 @@ namespace BA_Dashboard
             public string Filtering_Server { get; set; }
             public string Filtering_Schedule { get; set; }
             public string Filtering_Files { get; set; }
+        }
+
+        private void Filtering_UC_Load(object sender, EventArgs e)
+        {
+            //// 7755 포트로 서버필터링 접속(나중에 7754인걸로 통일해서 필요없을 코드)
+            //try
+            //{
+            //    IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
+            //    int port = 7756;
+            //    IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
+            //    ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+            //    ClientSocket.Connect(iPEndPoint);
+            //    // 버퍼 
+            //    Filtering_UC.Buffer = new byte[1024];
+
+            //    // 클라이언트측에서 서버에게 "접속완료" 문구보냄.
+            //    Filtering_UC.message = "Filtering_Data";
+            //    Filtering_UC.data = System.Text.Encoding.ASCII.GetBytes(Filtering_UC.message);
+            //    ClientSocket.Send(Filtering_UC.data);
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Socket Connection Error");
+            //}
         }
     }
 }

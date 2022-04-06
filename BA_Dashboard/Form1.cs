@@ -50,10 +50,55 @@ namespace BA_Dashboard
 
         public Form1()
         {
-            //파일 읽기
+            ////파일 읽기
+            //string filepath = "C:\\Users\\BIT\\Desktop\\DownloadFromServer\\";
+            //IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
+            //int port = 7754;
+            //IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
+            //Socket ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+
+            //ClientSocket.Connect(iPEndPoint);
+
+            //// 버퍼 
+            //byte[] Buffer = new byte[1024];
+
+            //// 클라이언트측에서 서버에게 "접속완료" 문구보냄.
+            //string message = "Connect With Client";
+            //byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
+            //ClientSocket.Send(data);
+
+            //// String to store the response ASCII representation.
+            //String responseData = String.Empty;
+            //// Read the first batch of the TcpServer response bytes.
+            //// 서버로부터 처음에 환영인사 문구 메세지 받음
+
+            //int rev = ClientSocket.Receive(Buffer);
+            //responseData = System.Text.Encoding.ASCII.GetString(Buffer, 0, rev);
+
+            ////MessageBox.Show("Received: {responseData}", responseData);
+
+            //// 첫 파일 구조체 정보 
+            //rev = ClientSocket.Receive(Buffer);
+            //int fileNameLen = BitConverter.ToInt32(Buffer, 0);
+            //string fileName = Encoding.ASCII.GetString(Buffer, 4, fileNameLen);
+
+            //// 첫 파일 저장 
+            //BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName, FileMode.Create, FileAccess.Write));
+            //bWrite.Write(Buffer, 4 + fileNameLen + 1, rev - 4 - fileNameLen - 1);
+            //bWrite.Close();
+
+            //// 파일 읽기 
+            //BinaryReader bRead = new BinaryReader(File.Open(filepath + fileName, FileMode.Open, FileAccess.Read));
+
+            //ChartData ChartDatas = new ChartData();
+            //ChartDatas.Read_Chart_Data(bRead);
+            //bRead.Close();
+
+            // 
+            ////파일 읽기
             string filepath = "C:\\Users\\BIT\\Desktop\\DownloadFromServer\\";
             IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
-            int port = 7754;
+            int port = 7756;
             IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
             Socket ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
@@ -63,7 +108,7 @@ namespace BA_Dashboard
             byte[] Buffer = new byte[1024];
 
             // 클라이언트측에서 서버에게 "접속완료" 문구보냄.
-            string message = "Connect With Client";
+            string message = "ChartData";
             byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
             ClientSocket.Send(data);
 
@@ -75,16 +120,23 @@ namespace BA_Dashboard
             int rev = ClientSocket.Receive(Buffer);
             responseData = System.Text.Encoding.ASCII.GetString(Buffer, 0, rev);
 
+            Buffer = new byte[4096];
             //MessageBox.Show("Received: {responseData}", responseData);
 
             // 첫 파일 구조체 정보 
-            rev = ClientSocket.Receive(Buffer);
+            rev = ClientSocket.Receive(Buffer,0,23,0);
             int fileNameLen = BitConverter.ToInt32(Buffer, 0);
             string fileName = Encoding.ASCII.GetString(Buffer, 4, fileNameLen);
+            int fileSize = BitConverter.ToInt32(Buffer, 4 + fileNameLen + 1);
 
-            // 첫 파일 저장 
-            BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName, FileMode.Create, FileAccess.Write));
-            bWrite.Write(Buffer, 4 + fileNameLen + 1, rev - 4 - fileNameLen - 1);
+            Buffer = new byte[4096];
+            rev = 0;
+            rev = ClientSocket.Receive(Buffer, 0);
+            //rev = ClientSocket.Receive(Buffer, 0);
+            BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName,
+FileMode.Create, FileAccess.Write));
+
+            bWrite.Write(Buffer, 0, rev);
             bWrite.Close();
 
             // 파일 읽기 
@@ -93,6 +145,7 @@ namespace BA_Dashboard
             ChartData ChartDatas = new ChartData();
             ChartDatas.Read_Chart_Data(bRead);
             bRead.Close();
+
             InitializeComponent();
 
             Chart_UC chart_UC = new Chart_UC();
@@ -156,6 +209,30 @@ namespace BA_Dashboard
                 ContentPanel.Controls.Add(error_UC);
             }
             ContentPanel.Controls["Error_UC"].BringToFront();
+        }
+
+        private void ContentPanel_DockChanged(object sender, EventArgs e)
+        {
+            // 7755 포트로 서버필터링 접속(나중에 7754인걸로 통일해서 필요없을 코드)
+            try
+            {
+                IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
+                int port = 7756;
+                IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
+                ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+                ClientSocket.Connect(iPEndPoint);
+                // 버퍼 
+                Filtering_UC.Buffer = new byte[1024];
+
+                // 클라이언트측에서 서버에게 "접속완료" 문구보냄.
+                Filtering_UC.message = "Filtering_Data";
+                Filtering_UC.data = System.Text.Encoding.ASCII.GetBytes(Filtering_UC.message);
+                ClientSocket.Send(Filtering_UC.data);
+            }
+            catch
+            {
+                MessageBox.Show("Socket Connection Error");
+            }
         }
     }
 

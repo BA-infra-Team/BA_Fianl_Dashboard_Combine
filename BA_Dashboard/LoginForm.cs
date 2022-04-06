@@ -19,7 +19,7 @@ namespace BA_Dashboard
         public LoginForm()
         {
             IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
-            int port = 7754;
+            int port = 7756;
             IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
             ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 

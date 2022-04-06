@@ -208,6 +208,7 @@
             this.Controls.Add(this.FilterSecondTopPanel);
             this.Name = "Filtering_UC";
             this.Size = new System.Drawing.Size(1644, 901);
+            this.Load += new System.EventHandler(this.Filtering_UC_Load);
             this.FilterSecondTopPanel.ResumeLayout(false);
             this.FilterSecondTopPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
