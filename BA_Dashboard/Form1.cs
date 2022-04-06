@@ -15,6 +15,31 @@ namespace BA_Dashboard
 {
     public partial class Form1 : Form
     {
+        static Form1 _obj;
+        public static Form1 Instance
+        {
+            get
+            {
+                if (_obj == null)
+                {
+                    _obj = new Form1();
+                }
+                return _obj;
+            }
+        }
+
+        public Panel row_1_col_1_panel
+        {
+            get { return panel4; }
+            set { panel4 = value; }
+        }
+
+        public Panel First_Panel
+        {
+            get { return PanelContainer; }
+            set { PanelContainer = value; }
+        }
+
         public Form1()
         {
             //파일 읽기
@@ -42,7 +67,7 @@ namespace BA_Dashboard
             int rev = ClientSocket.Receive(Buffer);
             responseData = System.Text.Encoding.ASCII.GetString(Buffer, 0, rev);
 
-            MessageBox.Show("Received: {responseData}", responseData);
+            //MessageBox.Show("Received: {responseData}", responseData);
 
             // 첫 파일 구조체 정보 
             rev = ClientSocket.Receive(Buffer);
@@ -73,22 +98,27 @@ namespace BA_Dashboard
         // 서치 버튼
         private void button5_Click(object sender, EventArgs e)
         {
-            var FilterForm = new FilterForm();
-            FilterForm.Show();
+
         }
 
         // 차트 버튼
         private void button6_Click(object sender, EventArgs e)
         {
-            var Statistics = new StatisticsForm();
-            Statistics.Show();
+
         }
 
         // 에러 버튼 
         private void button7_Click(object sender, EventArgs e)
         {
-            var ErrorReport = new ErrorReportForm();
-            ErrorReport.Show();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            _obj = this;
+            row_1_col_1_Line_UC UChome = new row_1_col_1_Line_UC();
+            UChome.Dock = DockStyle.Fill;
+            panel4.Controls.Add(UChome);
         }
     }
 
@@ -285,8 +315,6 @@ namespace BA_Dashboard
             Total_File_Size_LineChart_2022_02_14_Count = bRead.ReadInt32();
             Total_File_Size_LineChart_2022_02_15_Count = bRead.ReadInt32();
 
-
-
             // 일별 저장 사이즈 (2022-03-24 추가)
             Total_Write_Size_LineChart_2022_02_08_Count = bRead.ReadInt32();
             Total_Write_Size_LineChart_2022_02_09_Count = bRead.ReadInt32();
@@ -306,7 +334,6 @@ namespace BA_Dashboard
             Total_Data_Transferred_LineChart_2022_02_13_Count = bRead.ReadInt32();
             Total_Data_Transferred_LineChart_2022_02_14_Count = bRead.ReadInt32();
             Total_Data_Transferred_LineChart_2022_02_15_Count = bRead.ReadInt32();
-
         }
     }
 }

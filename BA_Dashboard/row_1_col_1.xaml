@@ -8,11 +8,11 @@
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              xmlns:zoomingAndPanning="clr-namespace:BA_Dashboard"
              d:DesignHeight="450" d:DesignWidth="800" d:DataContext="{d:DesignInstance local:row_1_col_1}">
-    
+
     <UserControl.Resources>
         <zoomingAndPanning:ZoomingModeCoverter x:Key="ZoomingModeCoverter"></zoomingAndPanning:ZoomingModeCoverter>
     </UserControl.Resources>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -22,7 +22,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+        </Grid>
         <StackPanel Grid.Row="1">
             <Button Click="ToogleZoomingMode">
                 <TextBlock>Toggle zoming mode, current is: 
@@ -40,7 +45,9 @@
             <lvc:CartesianChart.AxisY>
                 <lvc:Axis Title="GB" Name="Y" LabelFormatter="{Binding YFormatter}"/>
             </lvc:CartesianChart.AxisY>
-    </lvc:CartesianChart>
-        <Label Grid.Row="0" Content="파일사이즈,저장사이즈,데이터 전송량(GB) 비교 차트" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        </lvc:CartesianChart>
+        <Label Grid.Row="0" Grid.Column="0" Content="File Size, Write Size, Transferred Data (GB) || Line Chart" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Button Grid.Row="0" Grid.Column="1" Content="Next" HorizontalAlignment="Right" VerticalAlignment="Center" Width="70" Click="Button_Click"/>
+
     </Grid>
 </UserControl>

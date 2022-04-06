@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BA_Dashboard
 {
-    public partial class StatisticsForm : Form
+    public partial class Filtering_UC : UserControl
     {
-        public StatisticsForm()
+        public Filtering_UC()
         {
             InitializeComponent();
         }

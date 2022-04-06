@@ -58,17 +58,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ErrorReportForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Filtering_UC.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ErrorReportForm.Designer.cs">
-      <DependentUpon>ErrorReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FilterForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FilterForm.Designer.cs">
-      <DependentUpon>FilterForm.cs</DependentUpon>
+    <Compile Include="Filtering_UC.Designer.cs">
+      <DependentUpon>Filtering_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -96,20 +90,23 @@
     <Compile Include="row_1_col_1.xaml.cs">
       <DependentUpon>row_1_col_1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Statistics.xaml.cs">
-      <DependentUpon>Statistics.xaml</DependentUpon>
+    <Compile Include="row_1_col_1_Column.xaml.cs">
+      <DependentUpon>row_1_col_1_Column.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StatisticsForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="row_1_col_1_Column_UC.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="StatisticsForm.Designer.cs">
-      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    <Compile Include="row_1_col_1_Column_UC.Designer.cs">
+      <DependentUpon>row_1_col_1_Column_UC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ErrorReportForm.resx">
-      <DependentUpon>ErrorReportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FilterForm.resx">
-      <DependentUpon>FilterForm.cs</DependentUpon>
+    <Compile Include="row_1_col_1_Line_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="row_1_col_1_Line_UC.Designer.cs">
+      <DependentUpon>row_1_col_1_Line_UC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Filtering_UC.resx">
+      <DependentUpon>Filtering_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -126,8 +123,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StatisticsForm.resx">
-      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    <EmbeddedResource Include="row_1_col_1_Column_UC.resx">
+      <DependentUpon>row_1_col_1_Column_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="row_1_col_1_Line_UC.resx">
+      <DependentUpon>row_1_col_1_Line_UC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -157,6 +157,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="row_1_col_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="row_1_col_1_Column.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

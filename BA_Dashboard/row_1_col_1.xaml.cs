@@ -38,8 +38,8 @@ namespace BA_Dashboard
                                                         ChartData.Total_File_Size_LineChart_2022_02_14_Count,
                                                         ChartData.Total_File_Size_LineChart_2022_02_15_Count
                     },
-                    PointGeometrySize = 0,
-                    StrokeThickness = 1,
+                    PointGeometry = DefaultGeometries.Circle,
+                    PointGeometrySize = 10
                 },
                  new LineSeries
                 {
@@ -53,8 +53,8 @@ namespace BA_Dashboard
                                                         ChartData.Total_Write_Size_LineChart_2022_02_14_Count,
                                                         ChartData.Total_Write_Size_LineChart_2022_02_15_Count
                     },
-                    PointGeometrySize = 0,
-                    StrokeThickness = 1,
+                    PointGeometry = DefaultGeometries.Circle,
+                    PointGeometrySize = 10
                 },
 
                   new LineSeries
@@ -69,8 +69,8 @@ namespace BA_Dashboard
                                                         ChartData.Total_Data_Transferred_LineChart_2022_02_14_Count,
                                                         ChartData.Total_Data_Transferred_LineChart_2022_02_15_Count
                     },
-                    PointGeometrySize = 0,
-                    StrokeThickness = 1,
+                    PointGeometry = DefaultGeometries.Circle,
+                    PointGeometrySize = 10
                 },
 
 
@@ -162,6 +162,19 @@ namespace BA_Dashboard
             X.MaxValue = double.NaN;
             Y.MinValue = double.NaN;
             Y.MaxValue = double.NaN;
+        }
+        #endregion
+
+        #region Next 버튼 함수 (다음 차트화면으로 넘어감)
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (!Form1.Instance.row_1_col_1_panel.Controls.ContainsKey("row_1_col_1_Column_UC"))
+            {
+                row_1_col_1_Column_UC UCnext = new row_1_col_1_Column_UC();
+                UCnext.Dock = System.Windows.Forms.DockStyle.Fill;
+                Form1.Instance.row_1_col_1_panel.Controls.Add(UCnext);
+            }
+            Form1.Instance.row_1_col_1_panel.Controls["row_1_col_1_Column_UC"].BringToFront();
         }
         #endregion
     }
