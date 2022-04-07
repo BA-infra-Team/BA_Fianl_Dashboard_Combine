@@ -37,10 +37,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ID_textbox = new System.Windows.Forms.TextBox();
+            this.CancleBtn = new System.Windows.Forms.Button();
+            this.LoginBtn = new System.Windows.Forms.Button();
             this.Pwd_textbox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ID_textbox = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -129,8 +129,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.CancleBtn);
+            this.panel2.Controls.Add(this.LoginBtn);
             this.panel2.Controls.Add(this.Pwd_textbox);
             this.panel2.Controls.Add(this.ID_textbox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -139,12 +139,26 @@
             this.panel2.Size = new System.Drawing.Size(1184, 638);
             this.panel2.TabIndex = 6;
             // 
-            // ID_textbox
+            // CancleBtn
             // 
-            this.ID_textbox.Location = new System.Drawing.Point(399, 100);
-            this.ID_textbox.Name = "ID_textbox";
-            this.ID_textbox.Size = new System.Drawing.Size(395, 21);
-            this.ID_textbox.TabIndex = 0;
+            this.CancleBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.CancleBtn.Location = new System.Drawing.Point(621, 255);
+            this.CancleBtn.Name = "CancleBtn";
+            this.CancleBtn.Size = new System.Drawing.Size(75, 23);
+            this.CancleBtn.TabIndex = 3;
+            this.CancleBtn.Text = "Cancle";
+            this.CancleBtn.UseVisualStyleBackColor = true;
+            // 
+            // LoginBtn
+            // 
+            this.LoginBtn.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.LoginBtn.Location = new System.Drawing.Point(485, 255);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.Size = new System.Drawing.Size(75, 23);
+            this.LoginBtn.TabIndex = 2;
+            this.LoginBtn.Text = "Login";
+            this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // Pwd_textbox
             // 
@@ -153,24 +167,12 @@
             this.Pwd_textbox.Size = new System.Drawing.Size(395, 21);
             this.Pwd_textbox.TabIndex = 1;
             // 
-            // button1
+            // ID_textbox
             // 
-            this.button1.Location = new System.Drawing.Point(485, 255);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(621, 255);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ID_textbox.Location = new System.Drawing.Point(399, 100);
+            this.ID_textbox.Name = "ID_textbox";
+            this.ID_textbox.Size = new System.Drawing.Size(395, 21);
+            this.ID_textbox.TabIndex = 0;
             // 
             // LoginForm
             // 
@@ -204,8 +206,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CancleBtn;
+        private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.TextBox Pwd_textbox;
         private System.Windows.Forms.TextBox ID_textbox;
     }

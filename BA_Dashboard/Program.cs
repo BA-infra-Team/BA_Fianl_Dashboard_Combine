@@ -18,6 +18,17 @@ namespace BA_Dashboard
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new Form1());
             Application.Run(new LoginForm());
+
+            //LoginForm Login = new LoginForm();
+            //if (Login.ShowDialog() == DialogResult.OK)
+            //{
+
+            //    Application.Run(new Form1());
+            //}
+            //else
+            //{
+            //    //Application.Exit();
+            //}
         }
     }
 }

@@ -94,8 +94,8 @@ namespace BA_Dashboard
             //ChartDatas.Read_Chart_Data(bRead);
             //bRead.Close();
 
-            // 
-            ////파일 읽기
+            // 포트 7756 테스트
+            //파일 읽기
             string filepath = "C:\\Users\\BIT\\Desktop\\DownloadFromServer\\";
             IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
             int port = 7756;
@@ -124,7 +124,7 @@ namespace BA_Dashboard
             //MessageBox.Show("Received: {responseData}", responseData);
 
             // 첫 파일 구조체 정보 
-            rev = ClientSocket.Receive(Buffer,0,23,0);
+            rev = ClientSocket.Receive(Buffer, 0, 23, 0);
             int fileNameLen = BitConverter.ToInt32(Buffer, 0);
             string fileName = Encoding.ASCII.GetString(Buffer, 4, fileNameLen);
             int fileSize = BitConverter.ToInt32(Buffer, 4 + fileNameLen + 1);
@@ -209,30 +209,6 @@ FileMode.Create, FileAccess.Write));
                 ContentPanel.Controls.Add(error_UC);
             }
             ContentPanel.Controls["Error_UC"].BringToFront();
-        }
-
-        private void ContentPanel_DockChanged(object sender, EventArgs e)
-        {
-            // 7755 포트로 서버필터링 접속(나중에 7754인걸로 통일해서 필요없을 코드)
-            try
-            {
-                IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
-                int port = 7756;
-                IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
-                ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-                ClientSocket.Connect(iPEndPoint);
-                // 버퍼 
-                Filtering_UC.Buffer = new byte[1024];
-
-                // 클라이언트측에서 서버에게 "접속완료" 문구보냄.
-                Filtering_UC.message = "Filtering_Data";
-                Filtering_UC.data = System.Text.Encoding.ASCII.GetBytes(Filtering_UC.message);
-                ClientSocket.Send(Filtering_UC.data);
-            }
-            catch
-            {
-                MessageBox.Show("Socket Connection Error");
-            }
         }
     }
 

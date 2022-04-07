@@ -45,7 +45,7 @@ namespace BA_Dashboard
             // 리스트뷰 내용 초기화 
             listView1.Items.Clear();
 
-            //// 7755 포트로 서버필터링 접속(나중에 7754인걸로 통일해서 필요없을 코드)
+            // 접속 
             try
             {
                 IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
@@ -173,30 +173,6 @@ namespace BA_Dashboard
             public string Filtering_Server { get; set; }
             public string Filtering_Schedule { get; set; }
             public string Filtering_Files { get; set; }
-        }
-
-        private void Filtering_UC_Load(object sender, EventArgs e)
-        {
-            //// 7755 포트로 서버필터링 접속(나중에 7754인걸로 통일해서 필요없을 코드)
-            //try
-            //{
-            //    IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
-            //    int port = 7756;
-            //    IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
-            //    ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-            //    ClientSocket.Connect(iPEndPoint);
-            //    // 버퍼 
-            //    Filtering_UC.Buffer = new byte[1024];
-
-            //    // 클라이언트측에서 서버에게 "접속완료" 문구보냄.
-            //    Filtering_UC.message = "Filtering_Data";
-            //    Filtering_UC.data = System.Text.Encoding.ASCII.GetBytes(Filtering_UC.message);
-            //    ClientSocket.Send(Filtering_UC.data);
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Socket Connection Error");
-            //}
         }
     }
 }

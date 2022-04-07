@@ -317,7 +317,6 @@
             this.ContentPanel.Name = "ContentPanel";
             this.ContentPanel.Size = new System.Drawing.Size(1644, 901);
             this.ContentPanel.TabIndex = 2;
-            this.ContentPanel.DockChanged += new System.EventHandler(this.ContentPanel_DockChanged);
             // 
             // panel1
             // 
