@@ -34,6 +34,7 @@
                 Transferred Data
             </CheckBox>
             <Button Content="Back" Width="70" Click="Button_Click" Margin="20,0,0,0"/>
+
         </StackPanel>
         <lvc:CartesianChart Grid.Row="1" Hoverable="False">
             <lvc:CartesianChart.Series>

@@ -29,12 +29,12 @@
             </Grid.ColumnDefinitions>
         </Grid>
         <StackPanel Grid.Row="1">
-            <Button Click="ToogleZoomingMode">
+            <Button Click="ToogleZoomingMode" Background="#FFDDDDDD">
                 <TextBlock>Toggle zoming mode, current is: 
                     <TextBlock Text="{Binding ZoomingMode, Converter={StaticResource ZoomingModeCoverter}}"/>
                 </TextBlock>
             </Button>
-            <Button Click="ResetZoomOnClick">Reset Zoom</Button>
+            <Button Click="ResetZoomOnClick" Background="#FFDDDDDD">Reset Zoom</Button>
         </StackPanel>
 
         <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Right" Grid.Row="3" Zoom="{Binding ZoomingMode}">

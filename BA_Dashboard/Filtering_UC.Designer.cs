@@ -138,6 +138,7 @@
             this.listView1.Size = new System.Drawing.Size(1644, 760);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView1_DrawColumnHeader);
             // 
             // FilterThirdTopPanel
             // 
@@ -180,6 +181,7 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(125, 21);
             this.SearchTextBox.TabIndex = 8;
+            this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextBox_KeyDown);
             // 
             // label3
             // 
@@ -195,10 +197,18 @@
             // SearchComboBox
             // 
             this.SearchComboBox.FormattingEnabled = true;
+            this.SearchComboBox.Items.AddRange(new object[] {
+            "File Backup",
+            "Informix Onbar Backup",
+            "Mysql Backup",
+            "Oracle RMAN Backup",
+            "Physical Backup",
+            "Vmware Backup"});
             this.SearchComboBox.Location = new System.Drawing.Point(181, 43);
             this.SearchComboBox.Name = "SearchComboBox";
             this.SearchComboBox.Size = new System.Drawing.Size(121, 20);
             this.SearchComboBox.TabIndex = 7;
+            this.SearchComboBox.SelectedIndexChanged += new System.EventHandler(this.SearchComboBox_SelectedIndexChanged);
             // 
             // Filtering_UC
             // 

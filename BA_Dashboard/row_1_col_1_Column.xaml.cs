@@ -102,6 +102,7 @@ namespace BA_Dashboard
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (!Form1.Instance.row_1_col_1_panel.Controls.ContainsKey("row_1_col_1_Line_UC"))

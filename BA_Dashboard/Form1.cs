@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
@@ -37,6 +31,12 @@ namespace BA_Dashboard
 
         public Panel panelcontainer
         {
+            get { return panel5; }
+            set { panel5 = value; }
+        }
+
+        public Panel plnchart
+        {
             get { return PanelContainer; }
             set { PanelContainer = value; }
         }
@@ -50,50 +50,7 @@ namespace BA_Dashboard
 
         public Form1()
         {
-            ////파일 읽기
-            //string filepath = "C:\\Users\\BIT\\Desktop\\DownloadFromServer\\";
-            //IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
-            //int port = 7754;
-            //IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
-            //Socket ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-
-            //ClientSocket.Connect(iPEndPoint);
-
-            //// 버퍼 
-            //byte[] Buffer = new byte[1024];
-
-            //// 클라이언트측에서 서버에게 "접속완료" 문구보냄.
-            //string message = "Connect With Client";
-            //byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
-            //ClientSocket.Send(data);
-
-            //// String to store the response ASCII representation.
-            //String responseData = String.Empty;
-            //// Read the first batch of the TcpServer response bytes.
-            //// 서버로부터 처음에 환영인사 문구 메세지 받음
-
-            //int rev = ClientSocket.Receive(Buffer);
-            //responseData = System.Text.Encoding.ASCII.GetString(Buffer, 0, rev);
-
-            ////MessageBox.Show("Received: {responseData}", responseData);
-
-            //// 첫 파일 구조체 정보 
-            //rev = ClientSocket.Receive(Buffer);
-            //int fileNameLen = BitConverter.ToInt32(Buffer, 0);
-            //string fileName = Encoding.ASCII.GetString(Buffer, 4, fileNameLen);
-
-            //// 첫 파일 저장 
-            //BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName, FileMode.Create, FileAccess.Write));
-            //bWrite.Write(Buffer, 4 + fileNameLen + 1, rev - 4 - fileNameLen - 1);
-            //bWrite.Close();
-
-            //// 파일 읽기 
-            //BinaryReader bRead = new BinaryReader(File.Open(filepath + fileName, FileMode.Open, FileAccess.Read));
-
-            //ChartData ChartDatas = new ChartData();
-            //ChartDatas.Read_Chart_Data(bRead);
-            //bRead.Close();
-
+            
             // 포트 7756 테스트
             //파일 읽기
             string filepath = "C:\\Users\\BIT\\Desktop\\DownloadFromServer\\";
@@ -160,6 +117,12 @@ FileMode.Create, FileAccess.Write));
             row_1_col_1_Line_UC r_1_c_1_UChome = new row_1_col_1_Line_UC();
             r_1_c_1_UChome.Dock = DockStyle.Fill;
             row_1_col_1_Panel.Controls.Add(r_1_c_1_UChome);
+
+            //button5.Visible = false;
+            ChartList1 c1 = new ChartList1();
+            c1.Dock = DockStyle.Fill;
+            panelcontainer.Controls.Add(c1);
+
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
@@ -200,6 +163,7 @@ FileMode.Create, FileAccess.Write));
             ContentPanel.Controls["Chart_UC"].BringToFront();
         }
 
+        //Error 버튼 클릭
         private void ErrorBtn_Click(object sender, EventArgs e)
         {
             if (!ContentPanel.Controls.ContainsKey("Error_UC"))
@@ -210,6 +174,235 @@ FileMode.Create, FileAccess.Write));
             }
             ContentPanel.Controls["Error_UC"].BringToFront();
         }
+
+        //back 버튼 클릭
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList1"])
+            {
+                ChartList7 c7 = new ChartList7();
+                c7.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c7);
+
+                Form1.Instance.panelcontainer.Controls["ChartList7"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+            }
+
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2"])
+            {
+                ChartList1 c1 = new ChartList1();
+                c1.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c1);
+
+                Form1.Instance.panelcontainer.Controls["ChartList1"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+            }
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList3"])
+            {
+                ChartList2 c2 = new ChartList2();
+                c2.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c2);
+
+                Form1.Instance.panelcontainer.Controls["ChartList2"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+
+
+            }
+
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList4"])
+            {
+                ChartList3 c3 = new ChartList3();
+                c3.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c3);
+
+                Form1.Instance.panelcontainer.Controls["ChartList3"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+
+
+            }
+
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5"])
+            {
+                ChartList4 c4 = new ChartList4();
+                c4.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c4);
+
+                Form1.Instance.panelcontainer.Controls["ChartList4"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+
+            }
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6"])
+            {
+                ChartList5 c5 = new ChartList5();
+                c5.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c5);
+
+                Form1.Instance.panelcontainer.Controls["ChartList5"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+            }
+
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList7"])
+            {
+                ChartList6 c6 = new ChartList6();
+                c6.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c6);
+
+                Form1.Instance.panelcontainer.Controls["ChartList6"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+
+            }
+        }
+
+        //Next 버튼 클릭
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList1"])
+            {
+                ChartList2 c2 = new ChartList2();
+                c2.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c2);
+                Form1.Instance.panelcontainer.Controls["ChartList2"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+            }
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2"])
+            {
+                ChartList3 c3 = new ChartList3();
+                c3.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c3);
+                Form1.Instance.panelcontainer.Controls["ChartList3"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+
+
+            }
+
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList3"])
+            {
+                ChartList4 c4 = new ChartList4();
+                c4.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c4);
+
+                Form1.Instance.panelcontainer.Controls["ChartList4"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+
+
+            }
+
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList4"])
+            {
+                ChartList5 c5 = new ChartList5();
+                c5.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c5);
+
+                Form1.Instance.panelcontainer.Controls["ChartList5"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+
+
+            }
+
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5"])
+            {
+                ChartList6 c6 = new ChartList6();
+                c6.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c6);
+
+                Form1.Instance.panelcontainer.Controls["ChartList6"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+
+            }
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6"])
+            {
+                ChartList7 c7 = new ChartList7();
+                c7.Dock = DockStyle.Fill;
+                Form1.Instance.panelcontainer.Controls.Add(c7);
+
+                Form1.Instance.panelcontainer.Controls["ChartList7"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+
+            }
+            else
+            {
+                Form1.Instance.panelcontainer.Controls["ChartList1"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+            }
+
+        }
+
+        // 확대 버튼 클릭 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList1"])
+            {
+                ChartList1 c1 = new ChartList1();
+                c1.ChartList1_Btn.Visible = true;
+                c1.Dock = DockStyle.Fill;
+                Form1.Instance.plnchart.Controls.Add(c1);
+                Form1.Instance.plnchart.Controls["ChartList1"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+                c1.button1.Visible = true;
+                c1.button2.Visible = true;
+            }
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2"])
+            {
+                ChartList2 c2 = new ChartList2();
+                c2.Dock = DockStyle.Fill;
+                Form1.Instance.plnchart.Controls.Add(c2);
+                Form1.Instance.plnchart.Controls["ChartList2"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+                c2.button1.Visible = true;
+                c2.button2.Visible = true;
+            }
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList3"])
+            {
+                ChartList3 c3 = new ChartList3();
+                c3.Dock = DockStyle.Fill;
+                Form1.Instance.plnchart.Controls.Add(c3);
+                Form1.Instance.plnchart.Controls["ChartList3"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+                c3.button1.Visible = true;
+                c3.button2.Visible = true;
+            }
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList4"])
+            {
+                ChartList4 c4 = new ChartList4();
+                c4.Dock = DockStyle.Fill;
+                Form1.Instance.plnchart.Controls.Add(c4);
+                Form1.Instance.plnchart.Controls["ChartList4"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+                c4.button1.Visible = true;
+                c4.button2.Visible = true;
+            }
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5"])
+            {
+                ChartList5 c5 = new ChartList5();
+                c5.Dock = DockStyle.Fill;
+                Form1.Instance.plnchart.Controls.Add(c5);
+                Form1.Instance.plnchart.Controls["ChartList5"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+                c5.button1.Visible = true;
+                c5.button2.Visible = true;
+            }
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6"])
+            {
+                ChartList6 c6 = new ChartList6();
+                c6.Dock = DockStyle.Fill;
+                Form1.Instance.plnchart.Controls.Add(c6);
+                Form1.Instance.plnchart.Controls["ChartList6"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+                c6.button1.Visible = true;
+                c6.button2.Visible = true;
+            }
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList7"])
+            {
+                ChartList7 c7 = new ChartList7();
+                c7.Dock = DockStyle.Fill;
+                Form1.Instance.plnchart.Controls.Add(c7);
+                Form1.Instance.plnchart.Controls["ChartList7"].BringToFront();
+                Form1.Instance.button5.Visible = true;
+                c7.button1.Visible = true;
+                c7.button2.Visible = true;
+            }
+        }
     }
 
     public class ChartData
@@ -217,8 +410,12 @@ FileMode.Create, FileAccess.Write));
         // 홈 UI, 백업-메소드 비율을 보여주기 위한 데이터 구조체 선언 
         public static int Backup_Method_Ratio_Pie_Chart_Total_Count;
         public static int Backup_Method_Ratio_Pie_Chart_Archive_Backup_Count;
+        public static int Backup_Method_Ratio_Pie_Chart_Cumulative_Backup_Count;
         public static int Backup_Method_Ratio_Pie_Chart_Differential_Backup_Count;
         public static int Backup_Method_Ratio_Pie_Chart_Dump_Backup_Count;
+        public static int Backup_Method_Ratio_Pie_Chart_Enterprise_Differential_Backup_Count;
+        public static int Backup_Method_Ratio_Pie_Chart_Enterprise_Full_Backup_Count;
+        public static int Backup_Method_Ratio_Pie_Chart_Enterprise_Incremental_Backup_Count;
         public static int Backup_Method_Ratio_Pie_Chart_Full_Backup_Count;
         public static int Backup_Method_Ratio_Pie_Chart_Incremental_Backup_Count;
         public static int Backup_Method_Ratio_Pie_Chart_Synthetic_Count;
@@ -280,10 +477,10 @@ FileMode.Create, FileAccess.Write));
         public static int Error_Ratio_By_Job_Status_PieChart_Canceled_Error_Count;
 
         // 스케줄 별 개수 표시 
-        public int Schedule_testsc1_Count;
-        public int Schedule_testsc2_Count;
-        public int Schedule_testsc3_Count;
-        public int Schedule_testsc4_Count;
+        public static int Schedule_testsc1_Count;
+        public static int Schedule_testsc2_Count;
+        public static int Schedule_testsc3_Count;
+        public static int Schedule_testsc4_Count;
 
         // 파일 총 개수
         public int Total_Files_Count;
@@ -323,8 +520,12 @@ FileMode.Create, FileAccess.Write));
             // 홈 UI, 백업-메소드 비율을 보여주기 위한 데이터 구조체 선언 
             Backup_Method_Ratio_Pie_Chart_Total_Count = bRead.ReadInt32();
             Backup_Method_Ratio_Pie_Chart_Archive_Backup_Count = bRead.ReadInt32();
+            Backup_Method_Ratio_Pie_Chart_Cumulative_Backup_Count = bRead.ReadInt32();
             Backup_Method_Ratio_Pie_Chart_Differential_Backup_Count = bRead.ReadInt32();
             Backup_Method_Ratio_Pie_Chart_Dump_Backup_Count = bRead.ReadInt32();
+            Backup_Method_Ratio_Pie_Chart_Enterprise_Differential_Backup_Count = bRead.ReadInt32();
+            Backup_Method_Ratio_Pie_Chart_Enterprise_Full_Backup_Count = bRead.ReadInt32();
+            Backup_Method_Ratio_Pie_Chart_Enterprise_Incremental_Backup_Count = bRead.ReadInt32();
             Backup_Method_Ratio_Pie_Chart_Full_Backup_Count = bRead.ReadInt32();
             Backup_Method_Ratio_Pie_Chart_Incremental_Backup_Count = bRead.ReadInt32();
             Backup_Method_Ratio_Pie_Chart_Synthetic_Count = bRead.ReadInt32();

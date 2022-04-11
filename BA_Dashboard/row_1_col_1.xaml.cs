@@ -5,7 +5,6 @@ using LiveCharts.Wpf;
 using System.ComponentModel;
 using System.Windows;
 using System.Globalization;
-using LiveCharts.Defaults;
 using System.Windows.Data;
 
 namespace BA_Dashboard
@@ -165,6 +164,7 @@ namespace BA_Dashboard
         }
         #endregion
 
+      
         #region Next 버튼 함수 (다음 차트화면으로 넘어감)
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -178,7 +178,7 @@ namespace BA_Dashboard
         }
         #endregion
     }
-    #endregion
+#endregion
     #region 줌 모드 컨버터 
     public class ZoomingModeCoverter : IValueConverter
     {
