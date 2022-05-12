@@ -23,38 +23,43 @@ namespace BA_Dashboard
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            string UserName = ID_textbox.Text;
-            string Password = Pwd_textbox.Text;
+            string UserName = String.Empty;
+            string Password = String.Empty;
+
+            UserName = ID_textbox.Text;
+            Password = Pwd_textbox.Text;
+
+
+            IPAddress ipAddress = IPAddress.Parse("192.168.10.10");
+            int port = 7756;
+            IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
+            ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
             try
             {
-                IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
-                int port = 7756;
-                IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
-                ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-
                 ClientSocket.Connect(iPEndPoint);
-
-                // 버퍼 
-                Buffer = new byte[1024];
-
-                // 접속환영문구 수신
-                rev = 0;
-                responseData = String.Empty;
-                rev = ClientSocket.Receive(Buffer);
-                responseData = System.Text.Encoding.ASCII.GetString(Buffer, 0, rev);
-
-
-                // 클라이언트측에서 서버에게 "접속완료" 문구보냄.
-                string message = "Login";
-                byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
-                ClientSocket.Send(data);
             }
-
-            catch
+            catch (Exception err)
             {
-                MessageBox.Show("소켓통신 연결 에러입니다.");
+                MessageBox.Show(err.Message);
+                return ;
             }
+
+
+            // 버퍼 
+            Buffer = new byte[1024];
+
+            // 접속환영문구 수신
+            rev = 0;
+            responseData = String.Empty;
+            rev = ClientSocket.Receive(Buffer);
+            responseData = System.Text.Encoding.ASCII.GetString(Buffer, 0, rev);
+
+
+            // 클라이언트측에서 서버에게 "접속완료" 문구보냄.
+            string message = "Login";
+            byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
+            ClientSocket.Send(data);
 
             // 버퍼 
             Buffer = new byte[1024];

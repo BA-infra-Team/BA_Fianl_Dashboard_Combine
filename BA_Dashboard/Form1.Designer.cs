@@ -47,16 +47,11 @@
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.row_1_col_1_Panel = new System.Windows.Forms.Panel();
-            this.row_1_col_1_Line_UC1 = new BA_Dashboard.row_1_col_1_Line_UC();
             this.row_0_col_0_Panel = new System.Windows.Forms.Panel();
             this.row_0_col_0_tablePanel = new System.Windows.Forms.TableLayoutPanel();
             this.row_0_col_0_Left_Panel = new System.Windows.Forms.Panel();
-            this.row_0_col_0_Left_UC1 = new BA_Dashboard.row_0_col_0_Left_UC();
             this.row_0_col_0_Right_Panel = new System.Windows.Forms.Panel();
-            this.row_0_col_0_Right_UC1 = new BA_Dashboard.row_0_col_0_Right_UC();
             this.row_0_col_1_Panel = new System.Windows.Forms.Panel();
-            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
-            this.row_0_col_11 = new BA_Dashboard.row_0_col_1();
             this.row_1_col_0_Panel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -68,6 +63,11 @@
             this.SecondTopPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.row_1_col_1_Line_UC1 = new BA_Dashboard.row_1_col_1_Line_UC();
+            this.row_0_col_0_Left_UC1 = new BA_Dashboard.row_0_col_0_Left_UC();
+            this.row_0_col_0_Right_UC1 = new BA_Dashboard.row_0_col_0_Right_UC();
+            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
+            this.row_0_col_11 = new BA_Dashboard.row_0_col_1();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.LeftSidePanel.SuspendLayout();
@@ -118,9 +118,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(60, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 36);
+            this.label1.Size = new System.Drawing.Size(117, 36);
             this.label1.TabIndex = 0;
-            this.label1.Text = "BA_infra";
+            this.label1.Text = "BAinfra";
             // 
             // LeftSidePanel
             // 
@@ -303,14 +303,6 @@
             this.row_1_col_1_Panel.Size = new System.Drawing.Size(815, 412);
             this.row_1_col_1_Panel.TabIndex = 5;
             // 
-            // row_1_col_1_Line_UC1
-            // 
-            this.row_1_col_1_Line_UC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row_1_col_1_Line_UC1.Location = new System.Drawing.Point(0, 0);
-            this.row_1_col_1_Line_UC1.Name = "row_1_col_1_Line_UC1";
-            this.row_1_col_1_Line_UC1.Size = new System.Drawing.Size(815, 412);
-            this.row_1_col_1_Line_UC1.TabIndex = 0;
-            // 
             // row_0_col_0_Panel
             // 
             this.row_0_col_0_Panel.Controls.Add(this.row_0_col_0_tablePanel);
@@ -343,15 +335,6 @@
             this.row_0_col_0_Left_Panel.Size = new System.Drawing.Size(401, 406);
             this.row_0_col_0_Left_Panel.TabIndex = 0;
             // 
-            // row_0_col_0_Left_UC1
-            // 
-            this.row_0_col_0_Left_UC1.Location = new System.Drawing.Point(0, 0);
-            this.row_0_col_0_Left_UC1.MaximumSize = new System.Drawing.Size(401, 406);
-            this.row_0_col_0_Left_UC1.Name = "row_0_col_0_Left_UC1";
-            this.row_0_col_0_Left_UC1.onDrag = false;
-            this.row_0_col_0_Left_UC1.Size = new System.Drawing.Size(401, 406);
-            this.row_0_col_0_Left_UC1.TabIndex = 0;
-            // 
             // row_0_col_0_Right_Panel
             // 
             this.row_0_col_0_Right_Panel.Controls.Add(this.row_0_col_0_Right_UC1);
@@ -359,15 +342,6 @@
             this.row_0_col_0_Right_Panel.Name = "row_0_col_0_Right_Panel";
             this.row_0_col_0_Right_Panel.Size = new System.Drawing.Size(401, 406);
             this.row_0_col_0_Right_Panel.TabIndex = 1;
-            // 
-            // row_0_col_0_Right_UC1
-            // 
-            this.row_0_col_0_Right_UC1.Location = new System.Drawing.Point(0, 0);
-            this.row_0_col_0_Right_UC1.MaximumSize = new System.Drawing.Size(401, 406);
-            this.row_0_col_0_Right_UC1.Name = "row_0_col_0_Right_UC1";
-            this.row_0_col_0_Right_UC1.onDrag = false;
-            this.row_0_col_0_Right_UC1.Size = new System.Drawing.Size(401, 406);
-            this.row_0_col_0_Right_UC1.TabIndex = 0;
             // 
             // row_0_col_1_Panel
             // 
@@ -377,16 +351,6 @@
             this.row_0_col_1_Panel.Name = "row_0_col_1_Panel";
             this.row_0_col_1_Panel.Size = new System.Drawing.Size(815, 412);
             this.row_0_col_1_Panel.TabIndex = 7;
-            // 
-            // elementHost2
-            // 
-            this.elementHost2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elementHost2.Location = new System.Drawing.Point(0, 0);
-            this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(815, 412);
-            this.elementHost2.TabIndex = 0;
-            this.elementHost2.Text = "elementHost2";
-            this.elementHost2.Child = this.row_0_col_11;
             // 
             // row_1_col_0_Panel
             // 
@@ -526,6 +490,42 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "대시보드";
             // 
+            // row_1_col_1_Line_UC1
+            // 
+            this.row_1_col_1_Line_UC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.row_1_col_1_Line_UC1.Location = new System.Drawing.Point(0, 0);
+            this.row_1_col_1_Line_UC1.Name = "row_1_col_1_Line_UC1";
+            this.row_1_col_1_Line_UC1.Size = new System.Drawing.Size(815, 412);
+            this.row_1_col_1_Line_UC1.TabIndex = 0;
+            // 
+            // row_0_col_0_Left_UC1
+            // 
+            this.row_0_col_0_Left_UC1.Location = new System.Drawing.Point(0, 0);
+            this.row_0_col_0_Left_UC1.MaximumSize = new System.Drawing.Size(401, 406);
+            this.row_0_col_0_Left_UC1.Name = "row_0_col_0_Left_UC1";
+            this.row_0_col_0_Left_UC1.onDrag = false;
+            this.row_0_col_0_Left_UC1.Size = new System.Drawing.Size(401, 406);
+            this.row_0_col_0_Left_UC1.TabIndex = 0;
+            // 
+            // row_0_col_0_Right_UC1
+            // 
+            this.row_0_col_0_Right_UC1.Location = new System.Drawing.Point(0, 0);
+            this.row_0_col_0_Right_UC1.MaximumSize = new System.Drawing.Size(401, 406);
+            this.row_0_col_0_Right_UC1.Name = "row_0_col_0_Right_UC1";
+            this.row_0_col_0_Right_UC1.onDrag = false;
+            this.row_0_col_0_Right_UC1.Size = new System.Drawing.Size(401, 406);
+            this.row_0_col_0_Right_UC1.TabIndex = 0;
+            // 
+            // elementHost2
+            // 
+            this.elementHost2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost2.Location = new System.Drawing.Point(0, 0);
+            this.elementHost2.Name = "elementHost2";
+            this.elementHost2.Size = new System.Drawing.Size(815, 412);
+            this.elementHost2.TabIndex = 0;
+            this.elementHost2.Text = "elementHost2";
+            this.elementHost2.Child = this.row_0_col_11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -538,7 +538,7 @@
             this.MinimumSize = new System.Drawing.Size(800, 800);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BA_infra";
+            this.Text = "BAinfra";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();

@@ -58,85 +58,119 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chart1.xaml.cs">
+    <Compile Include="UserControl_xaml\Chart1.xaml.cs">
       <DependentUpon>Chart1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Chart2.xaml.cs">
+    <Compile Include="UserControl_xaml\Chart2.xaml.cs">
       <DependentUpon>Chart2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Chart3.xaml.cs">
+    <Compile Include="UserControl_xaml\Chart2_2.xaml.cs">
+      <DependentUpon>Chart2_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_xaml\Chart3.xaml.cs">
       <DependentUpon>Chart3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Chart4.xaml.cs">
+    <Compile Include="UserControl_xaml\Chart3_2.xaml.cs">
+      <DependentUpon>Chart3_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_xaml\Chart4.xaml.cs">
       <DependentUpon>Chart4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Chart5.xaml.cs">
+    <Compile Include="UserControl_xaml\Chart5.xaml.cs">
       <DependentUpon>Chart5.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Chart6.xaml.cs">
+    <Compile Include="UserControl_xaml\Chart5_2.xaml.cs">
+      <DependentUpon>Chart5_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_xaml\Chart6.xaml.cs">
       <DependentUpon>Chart6.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Chart7.xaml.cs">
+    <Compile Include="UserControl_xaml\Chart6_2.xaml.cs">
+      <DependentUpon>Chart6_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_xaml\Chart7.xaml.cs">
       <DependentUpon>Chart7.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChartList1.cs">
+    <Compile Include="UserControl_cs\ChartList1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ChartList1.Designer.cs">
+    <Compile Include="UserControl_cs\ChartList1.Designer.cs">
       <DependentUpon>ChartList1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChartList2.cs">
+    <Compile Include="UserControl_cs\ChartList2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ChartList2.Designer.cs">
+    <Compile Include="UserControl_cs\ChartList2.Designer.cs">
       <DependentUpon>ChartList2.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChartList3.cs">
+    <Compile Include="UserControl_cs\ChartList2_2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ChartList3.Designer.cs">
+    <Compile Include="UserControl_cs\ChartList2_2.Designer.cs">
+      <DependentUpon>ChartList2_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_cs\ChartList3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_cs\ChartList3.Designer.cs">
       <DependentUpon>ChartList3.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChartList4.cs">
+    <Compile Include="UserControl_cs\ChartList4.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ChartList4.Designer.cs">
+    <Compile Include="UserControl_cs\ChartList4.Designer.cs">
       <DependentUpon>ChartList4.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChartList5.cs">
+    <Compile Include="UserControl_cs\ChartList5.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ChartList5.Designer.cs">
+    <Compile Include="UserControl_cs\ChartList5.Designer.cs">
       <DependentUpon>ChartList5.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChartList6.cs">
+    <Compile Include="UserControl_cs\ChartList5_2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ChartList6.Designer.cs">
+    <Compile Include="UserControl_cs\ChartList5_2.Designer.cs">
+      <DependentUpon>ChartList5_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_cs\ChartList6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_cs\ChartList6.Designer.cs">
       <DependentUpon>ChartList6.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChartList7.cs">
+    <Compile Include="UserControl_cs\ChartList6_2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ChartList7.Designer.cs">
+    <Compile Include="UserControl_cs\ChartList6_2.Designer.cs">
+      <DependentUpon>ChartList6_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_cs\ChartList7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_cs\ChartList7.Designer.cs">
       <DependentUpon>ChartList7.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chart_UC.cs">
+    <Compile Include="UserControl_cs\Chart_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Chart_UC.Designer.cs">
+    <Compile Include="UserControl_cs\Chart_UC.Designer.cs">
       <DependentUpon>Chart_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Error_UC.cs">
+    <Compile Include="DragDropForPieChart\DataProvider.cs" />
+    <Compile Include="DragDropForPieChart\DropDownCommand.cs" />
+    <Compile Include="DragDropForPieChart\PiePoint.cs" />
+    <Compile Include="DragDropForPieChart\DropDownViewModel.cs" />
+    <Compile Include="UserControl_cs\Error_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Error_UC.Designer.cs">
+    <Compile Include="UserControl_cs\Error_UC.Designer.cs">
       <DependentUpon>Error_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Filtering_UC.cs">
+    <Compile Include="UserControl_cs\Filtering_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Filtering_UC.Designer.cs">
+    <Compile Include="UserControl_cs\Filtering_UC.Designer.cs">
       <DependentUpon>Filtering_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -153,79 +187,89 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="row_0_col_0.xaml.cs">
+    <Compile Include="DragDropForPieChart\RelayCommand.cs" />
+    <Compile Include="UserControl_xaml\row_0_col_0.xaml.cs">
       <DependentUpon>row_0_col_0.xaml</DependentUpon>
     </Compile>
-    <Compile Include="row_0_col_0_Left.xaml.cs">
+    <Compile Include="UserControl_xaml\row_0_col_0_Left.xaml.cs">
       <DependentUpon>row_0_col_0_Left.xaml</DependentUpon>
     </Compile>
-    <Compile Include="row_0_col_0_Left_UC.cs">
+    <Compile Include="UserControl_cs\row_0_col_0_Left_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="row_0_col_0_Left_UC.Designer.cs">
+    <Compile Include="UserControl_cs\row_0_col_0_Left_UC.Designer.cs">
       <DependentUpon>row_0_col_0_Left_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="row_0_col_0_Right.xaml.cs">
+    <Compile Include="UserControl_xaml\row_0_col_0_Right.xaml.cs">
       <DependentUpon>row_0_col_0_Right.xaml</DependentUpon>
     </Compile>
-    <Compile Include="row_0_col_0_Right_UC.cs">
+    <Compile Include="UserControl_cs\row_0_col_0_Right_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="row_0_col_0_Right_UC.Designer.cs">
+    <Compile Include="UserControl_cs\row_0_col_0_Right_UC.Designer.cs">
       <DependentUpon>row_0_col_0_Right_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="row_0_col_1.xaml.cs">
+    <Compile Include="UserControl_xaml\row_0_col_1.xaml.cs">
       <DependentUpon>row_0_col_1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="row_1_col_0.xaml.cs">
+    <Compile Include="UserControl_xaml\row_1_col_0.xaml.cs">
       <DependentUpon>row_1_col_0.xaml</DependentUpon>
     </Compile>
-    <Compile Include="row_1_col_1.xaml.cs">
+    <Compile Include="UserControl_xaml\row_1_col_1.xaml.cs">
       <DependentUpon>row_1_col_1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="row_1_col_1_Column.xaml.cs">
+    <Compile Include="UserControl_xaml\row_1_col_1_Column.xaml.cs">
       <DependentUpon>row_1_col_1_Column.xaml</DependentUpon>
     </Compile>
-    <Compile Include="row_1_col_1_Column_UC.cs">
+    <Compile Include="UserControl_cs\row_1_col_1_Column_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="row_1_col_1_Column_UC.Designer.cs">
+    <Compile Include="UserControl_cs\row_1_col_1_Column_UC.Designer.cs">
       <DependentUpon>row_1_col_1_Column_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="row_1_col_1_Line_UC.cs">
+    <Compile Include="UserControl_cs\row_1_col_1_Line_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="row_1_col_1_Line_UC.Designer.cs">
+    <Compile Include="UserControl_cs\row_1_col_1_Line_UC.Designer.cs">
       <DependentUpon>row_1_col_1_Line_UC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChartList1.resx">
+    <EmbeddedResource Include="UserControl_cs\ChartList1.resx">
       <DependentUpon>ChartList1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChartList2.resx">
+    <EmbeddedResource Include="UserControl_cs\ChartList2.resx">
       <DependentUpon>ChartList2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChartList3.resx">
+    <EmbeddedResource Include="UserControl_cs\ChartList2_2.resx">
+      <DependentUpon>ChartList2_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_cs\ChartList3.resx">
       <DependentUpon>ChartList3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChartList4.resx">
+    <EmbeddedResource Include="UserControl_cs\ChartList4.resx">
       <DependentUpon>ChartList4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChartList5.resx">
+    <EmbeddedResource Include="UserControl_cs\ChartList5.resx">
       <DependentUpon>ChartList5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChartList6.resx">
+    <EmbeddedResource Include="UserControl_cs\ChartList5_2.resx">
+      <DependentUpon>ChartList5_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_cs\ChartList6.resx">
       <DependentUpon>ChartList6.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChartList7.resx">
+    <EmbeddedResource Include="UserControl_cs\ChartList6_2.resx">
+      <DependentUpon>ChartList6_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_cs\ChartList7.resx">
       <DependentUpon>ChartList7.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Chart_UC.resx">
+    <EmbeddedResource Include="UserControl_cs\Chart_UC.resx">
       <DependentUpon>Chart_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Error_UC.resx">
+    <EmbeddedResource Include="UserControl_cs\Error_UC.resx">
       <DependentUpon>Error_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Filtering_UC.resx">
+    <EmbeddedResource Include="UserControl_cs\Filtering_UC.resx">
       <DependentUpon>Filtering_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -243,16 +287,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="row_0_col_0_Left_UC.resx">
+    <EmbeddedResource Include="UserControl_cs\row_0_col_0_Left_UC.resx">
       <DependentUpon>row_0_col_0_Left_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="row_0_col_0_Right_UC.resx">
+    <EmbeddedResource Include="UserControl_cs\row_0_col_0_Right_UC.resx">
       <DependentUpon>row_0_col_0_Right_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="row_1_col_1_Column_UC.resx">
+    <EmbeddedResource Include="UserControl_cs\row_1_col_1_Column_UC.resx">
       <DependentUpon>row_1_col_1_Column_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="row_1_col_1_Line_UC.resx">
+    <EmbeddedResource Include="UserControl_cs\row_1_col_1_Line_UC.resx">
       <DependentUpon>row_1_col_1_Line_UC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -270,59 +314,75 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Chart1.xaml">
+    <Page Include="UserControl_xaml\Chart1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Chart2.xaml">
+    <Page Include="UserControl_xaml\Chart2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Chart3.xaml">
+    <Page Include="UserControl_xaml\Chart2_2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Chart4.xaml">
+    <Page Include="UserControl_xaml\Chart3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Chart5.xaml">
+    <Page Include="UserControl_xaml\Chart3_2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Chart6.xaml">
+    <Page Include="UserControl_xaml\Chart4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Chart7.xaml">
+    <Page Include="UserControl_xaml\Chart5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="row_0_col_0.xaml">
+    <Page Include="UserControl_xaml\Chart5_2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="row_0_col_0_Left.xaml">
+    <Page Include="UserControl_xaml\Chart6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="row_0_col_0_Right.xaml">
+    <Page Include="UserControl_xaml\Chart6_2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="row_0_col_1.xaml">
+    <Page Include="UserControl_xaml\Chart7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="row_1_col_0.xaml">
+    <Page Include="UserControl_xaml\row_0_col_0.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="row_1_col_1.xaml">
+    <Page Include="UserControl_xaml\row_0_col_0_Left.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="row_1_col_1_Column.xaml">
+    <Page Include="UserControl_xaml\row_0_col_0_Right.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_xaml\row_0_col_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_xaml\row_1_col_0.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_xaml\row_1_col_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_xaml\row_1_col_1_Column.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -332,8 +392,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="left-arrow.png" />
-    <Content Include="right-arrow.png" />
+    <Content Include="Resources\left-arrow.png" />
+    <Content Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ToolTipDataClass\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

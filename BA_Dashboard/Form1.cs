@@ -50,60 +50,92 @@ namespace BA_Dashboard
 
         public Form1()
         {
-            
             // 포트 7756 테스트
             //파일 읽기
-            string filepath = "C:\\Users\\BIT\\Desktop\\DownloadFromServer\\";
-            IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
+            string filepath = "C:\\Users\\BA\\Desktop\\DownloadFromServer\\";
+            IPAddress ipAddress = IPAddress.Parse("192.168.10.10");
             int port = 7756;
             IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
             Socket ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
-            ClientSocket.Connect(iPEndPoint);
+            bool blockingState = ClientSocket.Blocking;
+            blockingState = false;
+            try
+            {
+                ClientSocket.Connect(iPEndPoint);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+                this.Close();
+                blockingState = true;
+            }
 
-            // 버퍼 
-            byte[] Buffer = new byte[1024];
 
-            // 클라이언트측에서 서버에게 "접속완료" 문구보냄.
-            string message = "ChartData";
-            byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
-            ClientSocket.Send(data);
+            try
+            {
+                // 버퍼
+                byte[] Buffer = new byte[1024];
 
-            // String to store the response ASCII representation.
-            String responseData = String.Empty;
-            // Read the first batch of the TcpServer response bytes.
-            // 서버로부터 처음에 환영인사 문구 메세지 받음
+                // 클라이언트측에서 서버에게 "접속완료" 문구보냄.
+                string message = "ChartData";
+                byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
+                ClientSocket.Send(data);
 
-            int rev = ClientSocket.Receive(Buffer);
-            responseData = System.Text.Encoding.ASCII.GetString(Buffer, 0, rev);
+                // String to store the response ASCII representation.
+                String responseData = String.Empty;
+                // Read the first batch of the TcpServer response bytes.
+                // 서버로부터 처음에 환영인사 문구 메세지 받음
 
-            Buffer = new byte[4096];
-            //MessageBox.Show("Received: {responseData}", responseData);
+                int rev = ClientSocket.Receive(Buffer);
+                responseData = System.Text.Encoding.ASCII.GetString(Buffer, 0, rev);
 
-            // 첫 파일 구조체 정보 
-            rev = ClientSocket.Receive(Buffer, 0, 23, 0);
-            int fileNameLen = BitConverter.ToInt32(Buffer, 0);
-            string fileName = Encoding.ASCII.GetString(Buffer, 4, fileNameLen);
-            int fileSize = BitConverter.ToInt32(Buffer, 4 + fileNameLen + 1);
+                Buffer = new byte[4096];
+                //MessageBox.Show("Received: {responseData}", responseData);
 
-            Buffer = new byte[4096];
-            rev = 0;
-            rev = ClientSocket.Receive(Buffer, 0);
-            //rev = ClientSocket.Receive(Buffer, 0);
-            BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName,
-FileMode.Create, FileAccess.Write));
+                // 첫 파일 구조체 정보 
+                rev = ClientSocket.Receive(Buffer, 0, 23, 0);
+                int fileNameLen = BitConverter.ToInt32(Buffer, 0);
+                string fileName = Encoding.ASCII.GetString(Buffer, 4, fileNameLen);
+                int fileSize = BitConverter.ToInt32(Buffer, 4 + fileNameLen + 1);
 
-            bWrite.Write(Buffer, 0, rev);
-            bWrite.Close();
+                Buffer = new byte[4096];
+                rev = 0;
+                rev = ClientSocket.Receive(Buffer, 0);
+                //rev = ClientSocket.Receive(Buffer, 0);
+                BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName,
+    FileMode.Create, FileAccess.Write));
 
-            // 파일 읽기 
-            BinaryReader bRead = new BinaryReader(File.Open(filepath + fileName, FileMode.Open, FileAccess.Read));
+                bWrite.Write(Buffer, 0, rev);
+                bWrite.Close();
 
-            ChartData ChartDatas = new ChartData();
-            ChartDatas.Read_Chart_Data(bRead);
-            bRead.Close();
+                // 파일 읽기 
+                BinaryReader bRead = new BinaryReader(File.Open(filepath + fileName, FileMode.Open, FileAccess.Read));
 
+                ChartData ChartDatas = new ChartData();
+                ChartDatas.Read_Chart_Data(bRead);
+                bRead.Close();
+            }
+
+            catch (SocketException e)
+            {
+                // 10035 == WSAEWOULDBLOCK
+                if (e.NativeErrorCode.Equals(10035))
+                {
+                    MessageBox.Show("Still Connected, but the Send would block");
+                }
+                else
+                {
+                    MessageBox.Show("Disconnected: error code {0}!", e.NativeErrorCode.ToString());
+                }
+            }
             InitializeComponent();
+            if(blockingState == true)
+            {
+                this.Close();
+            }   
+
+            
 
             Chart_UC chart_UC = new Chart_UC();
             Error_UC error_UC = new Error_UC();
@@ -149,6 +181,39 @@ FileMode.Create, FileAccess.Write));
             if (ContentPanel.Controls.ContainsKey("Error_UC"))
             {
                 ContentPanel.Controls["Error_UC"].SendToBack();
+            }
+            if (ContentPanel.Controls.ContainsKey("ChartList1"))
+            {
+                ContentPanel.Controls["ChartList1"].SendToBack();
+            }
+
+            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList1"])
+            {
+                Form1.Instance.plnchart.Controls[0].SendToBack();
+            }
+            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2"])
+            {
+                Form1.Instance.plnchart.Controls[0].SendToBack();
+            }
+            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList3"])
+            {
+                Form1.Instance.plnchart.Controls[0].SendToBack();
+            }
+            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList4"])
+            {
+                Form1.Instance.plnchart.Controls[0].SendToBack();
+            }
+            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5"])
+            {
+                Form1.Instance.plnchart.Controls[0].SendToBack();
+            }
+            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6"])
+            {
+                Form1.Instance.plnchart.Controls[0].SendToBack();
+            }
+            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList7"])
+            {
+                Form1.Instance.plnchart.Controls[0].SendToBack();
             }
         }
 
@@ -259,13 +324,13 @@ FileMode.Create, FileAccess.Write));
 
             if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList1"])
             {
-                ChartList2 c2 = new ChartList2();
+                ChartList2_2 c2 = new ChartList2_2();
                 c2.Dock = DockStyle.Fill;
                 Form1.Instance.panelcontainer.Controls.Add(c2);
-                Form1.Instance.panelcontainer.Controls["ChartList2"].BringToFront();
+                Form1.Instance.panelcontainer.Controls["ChartList2_2"].BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2"])
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2_2"])
             {
                 ChartList3 c3 = new ChartList3();
                 c3.Dock = DockStyle.Fill;
@@ -290,27 +355,27 @@ FileMode.Create, FileAccess.Write));
 
             else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList4"])
             {
-                ChartList5 c5 = new ChartList5();
+                ChartList5_2 c5 = new ChartList5_2();
                 c5.Dock = DockStyle.Fill;
                 Form1.Instance.panelcontainer.Controls.Add(c5);
 
-                Form1.Instance.panelcontainer.Controls["ChartList5"].BringToFront();
+                Form1.Instance.panelcontainer.Controls["ChartList5_2"].BringToFront();
                 Form1.Instance.button5.Visible = true;
 
 
             }
 
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5"])
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5_2"])
             {
-                ChartList6 c6 = new ChartList6();
+                ChartList6_2 c6 = new ChartList6_2();
                 c6.Dock = DockStyle.Fill;
                 Form1.Instance.panelcontainer.Controls.Add(c6);
 
-                Form1.Instance.panelcontainer.Controls["ChartList6"].BringToFront();
+                Form1.Instance.panelcontainer.Controls["ChartList6_2"].BringToFront();
                 Form1.Instance.button5.Visible = true;
 
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6"])
+            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6_2"])
             {
                 ChartList7 c7 = new ChartList7();
                 c7.Dock = DockStyle.Fill;
@@ -320,6 +385,7 @@ FileMode.Create, FileAccess.Write));
                 Form1.Instance.button5.Visible = true;
 
             }
+
             else
             {
                 Form1.Instance.panelcontainer.Controls["ChartList1"].BringToFront();

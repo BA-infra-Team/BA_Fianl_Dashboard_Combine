@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="BA_Dashboard.Chart4"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BA_Dashboard"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="412" d:DesignWidth="830">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1" Content="Job Status Error Ratio" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43" Width="209" FontSize="18" FontWeight="Bold"/>
+        <lvc:PieChart Name="Chart" Grid.Row="1" Grid.Column="1" Series="{Binding SeriesCollection}" 
+                      LegendLocation="Bottom" InnerRadius="50" Margin="10,50,10,50" Background="White" FontWeight="Normal">
+            <lvc:PieChart.ChartLegend>
+                <lvc:DefaultLegend BulletSize="20"></lvc:DefaultLegend>
+            </lvc:PieChart.ChartLegend>
+            <lvc:PieChart.DataTooltip>
+                <lvc:DefaultTooltip BulletSize="20"  SelectionMode="OnlySender"></lvc:DefaultTooltip>
+            </lvc:PieChart.DataTooltip>
+        </lvc:PieChart>
+    </Grid>
+</UserControl>
