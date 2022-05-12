@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="BA_Dashboard.Chart1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BA_Dashboard"
+             mc:Ignorable="d" 
+             xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             d:DesignHeight="412" d:DesignWidth="830">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Content="Avg Elapsed Time" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43" Width="166" FontSize="18" Foreground="Black" FontWeight="Bold"/>
+
+        <Wpf:CartesianChart Grid.Row="1" Grid.Column="1"  Series="{Binding SeriesCollection}" Margin="10,50,10,50" Foreground="Black" Background="White" >
+            <Wpf:CartesianChart.AxisY>
+                <Wpf:Axis Title="Second" LabelFormatter="{Binding YFormatter}"/>
+            </Wpf:CartesianChart.AxisY>
+            <Wpf:CartesianChart.AxisX>
+                <Wpf:Axis Title="Day" Labels="{Binding Labels}"/>
+            </Wpf:CartesianChart.AxisX>
+            <Wpf:CartesianChart.DataTooltip>
+                <Wpf:DefaultTooltip SelectionMode="OnlySender" />
+            </Wpf:CartesianChart.DataTooltip>
+        </Wpf:CartesianChart>
+    </Grid>
+</UserControl>
