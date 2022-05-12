@@ -5,6 +5,7 @@ namespace BA_Dashboard
 {
     public partial class ChartList7 : UserControl
     {
+        private bool drag = false;
         public ChartList7()
         {
             InitializeComponent();
@@ -19,6 +20,33 @@ namespace BA_Dashboard
         {
             this.button1.Visible = false;
             this.button2.Visible = false;
+        }
+
+        private void button2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                drag = true;
+            }
+        }
+
+        private void button2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+                this.panel2.Height = button2.Top + e.Y;
+                this.panel2.Width = button2.Left + e.X;
+                button2.Top = panel2.Height - button2.Height;
+                button2.Left = panel2.Width - button2.Width;
+            }
+        }
+
+        private void button2_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+                drag = false;
+            }
         }
     }
 }

@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
         <Label Grid.Column="1" Content="Job Status Error Ratio" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43" Width="209" FontSize="18" FontWeight="Bold"/>
         <lvc:PieChart Name="Chart" Grid.Row="1" Grid.Column="1" Series="{Binding SeriesCollection}" 
-                      LegendLocation="Bottom" InnerRadius="50" Margin="10,50,10,50" Background="White" FontWeight="Normal">
+                      LegendLocation="Bottom" InnerRadius="15" Margin="10,5,10,5" Background="White" FontWeight="Normal">
             <lvc:PieChart.ChartLegend>
                 <lvc:DefaultLegend BulletSize="20"></lvc:DefaultLegend>
             </lvc:PieChart.ChartLegend>

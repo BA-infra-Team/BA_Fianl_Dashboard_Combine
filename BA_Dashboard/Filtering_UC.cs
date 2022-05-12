@@ -53,7 +53,7 @@ namespace BA_Dashboard
             // 접속 
             try
             {
-                IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
+                IPAddress ipAddress = IPAddress.Parse("192.168.10.10");
                 int port = 7756;
                 IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
                 ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
@@ -89,7 +89,7 @@ namespace BA_Dashboard
 
             // 텍스트박스에서 읽어온 고객이 검색한 Job_Type (검색기준)변수 
             Job_Type = SearchTextBox.Text;
-            filepath = "C:\\Users\\BIT\\Desktop\\DownloadFromServer\\";
+            filepath = "C:\\Users\\BA\\DownloadFromServer";
             message = string.Empty;
 
             // 서버에 필터링 기준 정보를 메세지로 보냄. 

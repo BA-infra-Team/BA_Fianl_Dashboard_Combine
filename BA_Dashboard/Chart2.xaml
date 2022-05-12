@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
         <Label Grid.Row="0" Content="Daily Files Count" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43" Width="165" FontSize="18" FontWeight="Bold" Foreground="Black"/>
 
-        <Wpf:CartesianChart Grid.Row="1" Grid.Column="1" Series="{Binding SeriesCollection1}" LegendLocation="Top" Margin="10,50,10,50" Foreground="Black" Background="White">
+        <Wpf:CartesianChart Grid.Row="1" Grid.Column="1" Series="{Binding SeriesCollection1}" LegendLocation="Top" Margin="10,5,10,5" Foreground="Black" Background="White">
             <Wpf:CartesianChart.AxisX>
                 <Wpf:Axis Title="Date" Labels="{Binding Labels}"/>
             </Wpf:CartesianChart.AxisX>

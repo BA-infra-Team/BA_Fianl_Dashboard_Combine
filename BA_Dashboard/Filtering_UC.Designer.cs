@@ -177,9 +177,9 @@
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(357, 42);
+            this.SearchTextBox.Location = new System.Drawing.Point(343, 42);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(125, 21);
+            this.SearchTextBox.Size = new System.Drawing.Size(160, 21);
             this.SearchTextBox.TabIndex = 8;
             this.SearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchTextBox_KeyDown);
             // 
@@ -204,9 +204,9 @@
             "Oracle RMAN Backup",
             "Physical Backup",
             "Vmware Backup"});
-            this.SearchComboBox.Location = new System.Drawing.Point(181, 43);
+            this.SearchComboBox.Location = new System.Drawing.Point(160, 44);
             this.SearchComboBox.Name = "SearchComboBox";
-            this.SearchComboBox.Size = new System.Drawing.Size(121, 20);
+            this.SearchComboBox.Size = new System.Drawing.Size(160, 20);
             this.SearchComboBox.TabIndex = 7;
             this.SearchComboBox.SelectedIndexChanged += new System.EventHandler(this.SearchComboBox_SelectedIndexChanged);
             // 

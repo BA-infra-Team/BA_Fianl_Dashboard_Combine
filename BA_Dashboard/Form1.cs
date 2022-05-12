@@ -53,8 +53,8 @@ namespace BA_Dashboard
             
             // 포트 7756 테스트
             //파일 읽기
-            string filepath = "C:\\Users\\BIT\\Desktop\\DownloadFromServer\\";
-            IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
+            string filepath = "C:\\Users\\BA\\DownloadFromServer";
+            IPAddress ipAddress = IPAddress.Parse("192.168.10.10");
             int port = 7756;
             IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
             Socket ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
@@ -91,7 +91,7 @@ namespace BA_Dashboard
             rev = ClientSocket.Receive(Buffer, 0);
             //rev = ClientSocket.Receive(Buffer, 0);
             BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName,
-FileMode.Create, FileAccess.Write));
+            FileMode.Create, FileAccess.Write));
 
             bWrite.Write(Buffer, 0, rev);
             bWrite.Close();
@@ -150,6 +150,38 @@ FileMode.Create, FileAccess.Write));
             {
                 ContentPanel.Controls["Error_UC"].SendToBack();
             }
+            if(ContentPanel.Controls.ContainsKey("ChartListAll"))
+            {
+                ContentPanel.Controls["ChartListAll"].SendToBack();
+            }
+            if (plnchart.Controls.ContainsKey("ChartList1"))
+            {
+                ContentPanel.Controls["Form1"].BringToFront();
+            }
+            if (ContentPanel.Controls.ContainsKey("ChartList2"))
+            {
+                ContentPanel.Controls["ChartList2"].SendToBack();
+            }
+            if (ContentPanel.Controls.ContainsKey("ChartList3"))
+            {
+                ContentPanel.Controls["ChartList3"].SendToBack();
+            }
+            if (ContentPanel.Controls.ContainsKey("ChartList4"))
+            {
+                ContentPanel.Controls["ChartList4"].SendToBack();
+            }
+            if (ContentPanel.Controls.ContainsKey("ChartList5"))
+            {
+                ContentPanel.Controls["ChartList5"].SendToBack();
+            }
+            if (ContentPanel.Controls.ContainsKey("ChartList6"))
+            {
+                ContentPanel.Controls["ChartList6"].SendToBack();
+            }
+            if (ContentPanel.Controls.ContainsKey("ChartList7"))
+            {
+                ContentPanel.Controls["ChartList7"].SendToBack();
+            }
         }
 
         private void ChartBtn_Click(object sender, EventArgs e)
@@ -178,76 +210,55 @@ FileMode.Create, FileAccess.Write));
         //back 버튼 클릭
         private void button5_Click(object sender, EventArgs e)
         {
-            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList1"])
+            if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart1")
             {
-                ChartList7 c7 = new ChartList7();
-                c7.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c7);
-
-                Form1.Instance.panelcontainer.Controls["ChartList7"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart7();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
 
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart2")
             {
-                ChartList1 c1 = new ChartList1();
-                c1.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c1);
-
-                Form1.Instance.panelcontainer.Controls["ChartList1"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart1();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList3"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart3")
             {
-                ChartList2 c2 = new ChartList2();
-                c2.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c2);
-
-                Form1.Instance.panelcontainer.Controls["ChartList2"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart2();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
 
             }
 
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList4"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart4")
             {
-                ChartList3 c3 = new ChartList3();
-                c3.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c3);
-
-                Form1.Instance.panelcontainer.Controls["ChartList3"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart3();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
 
             }
 
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart5")
             {
-                ChartList4 c4 = new ChartList4();
-                c4.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c4);
-
-                Form1.Instance.panelcontainer.Controls["ChartList4"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart4();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart6")
             {
-                ChartList5 c5 = new ChartList5();
-                c5.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c5);
-
-                Form1.Instance.panelcontainer.Controls["ChartList5"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart5();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
 
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList7"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart7")
             {
-                ChartList6 c6 = new ChartList6();
-                c6.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c6);
-
-                Form1.Instance.panelcontainer.Controls["ChartList6"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart6();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
             }
@@ -257,72 +268,58 @@ FileMode.Create, FileAccess.Write));
         private void button6_Click(object sender, EventArgs e)
         {
 
-            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList1"])
+            if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart1")
             {
-                ChartList2 c2 = new ChartList2();
-                c2.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c2);
-                Form1.Instance.panelcontainer.Controls["ChartList2"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart2();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart2")
             {
-                ChartList3 c3 = new ChartList3();
-                c3.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c3);
-                Form1.Instance.panelcontainer.Controls["ChartList3"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart3();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
 
             }
 
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList3"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart3")
             {
-                ChartList4 c4 = new ChartList4();
-                c4.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c4);
-
-                Form1.Instance.panelcontainer.Controls["ChartList4"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart4();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
 
             }
 
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList4"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart4")
             {
-                ChartList5 c5 = new ChartList5();
-                c5.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c5);
-
-                Form1.Instance.panelcontainer.Controls["ChartList5"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart5();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
 
             }
 
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart5")
             {
-                ChartList6 c6 = new ChartList6();
-                c6.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c6);
-
-                Form1.Instance.panelcontainer.Controls["ChartList6"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart6();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart6")
             {
-                ChartList7 c7 = new ChartList7();
-                c7.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c7);
-
-                Form1.Instance.panelcontainer.Controls["ChartList7"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart7();
+                Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
             }
-            else
+            else if(Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart7")
             {
-                Form1.Instance.panelcontainer.Controls["ChartList1"].BringToFront();
+                Form1.Instance.elementHost1.Child = new Chart1();
+                Form1.Instance.elementHost1.BringToFront();
+                //Form1.Instance.panelcontainer.Controls["ChartList1"].BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
 
@@ -331,7 +328,7 @@ FileMode.Create, FileAccess.Write));
         // 확대 버튼 클릭 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList1"])
+            if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart1")
             {
                 ChartList1 c1 = new ChartList1();
                 c1.ChartList1_Btn.Visible = true;
@@ -342,7 +339,7 @@ FileMode.Create, FileAccess.Write));
                 c1.button1.Visible = true;
                 c1.button2.Visible = true;
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart2")
             {
                 ChartList2 c2 = new ChartList2();
                 c2.Dock = DockStyle.Fill;
@@ -352,7 +349,7 @@ FileMode.Create, FileAccess.Write));
                 c2.button1.Visible = true;
                 c2.button2.Visible = true;
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList3"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart3")
             {
                 ChartList3 c3 = new ChartList3();
                 c3.Dock = DockStyle.Fill;
@@ -362,7 +359,7 @@ FileMode.Create, FileAccess.Write));
                 c3.button1.Visible = true;
                 c3.button2.Visible = true;
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList4"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart4")
             {
                 ChartList4 c4 = new ChartList4();
                 c4.Dock = DockStyle.Fill;
@@ -372,7 +369,7 @@ FileMode.Create, FileAccess.Write));
                 c4.button1.Visible = true;
                 c4.button2.Visible = true;
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart5")
             {
                 ChartList5 c5 = new ChartList5();
                 c5.Dock = DockStyle.Fill;
@@ -382,7 +379,7 @@ FileMode.Create, FileAccess.Write));
                 c5.button1.Visible = true;
                 c5.button2.Visible = true;
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart6")
             {
                 ChartList6 c6 = new ChartList6();
                 c6.Dock = DockStyle.Fill;
@@ -392,7 +389,7 @@ FileMode.Create, FileAccess.Write));
                 c6.button1.Visible = true;
                 c6.button2.Visible = true;
             }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList7"])
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart7")
             {
                 ChartList7 c7 = new ChartList7();
                 c7.Dock = DockStyle.Fill;
@@ -402,6 +399,26 @@ FileMode.Create, FileAccess.Write));
                 c7.button1.Visible = true;
                 c7.button2.Visible = true;
             }
+        }
+
+        //All 버튼
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (!ContentPanel.Controls.ContainsKey("ChartListAll"))
+            {
+                ChartListAll chartall = new ChartListAll();
+                chartall.Dock = DockStyle.Fill;
+                ContentPanel.Controls.Add(chartall);
+                //chartall.button1.Visible = true;
+                chartall.button3.Visible = false;
+                chartall.button5.Visible = false;
+                chartall.button7.Visible = false;
+                chartall.button9.Visible = false;
+                chartall.button11.Visible = false;
+                chartall.button13.Visible = false;
+                chartall.button2.Visible = true;
+            }
+            ContentPanel.Controls["ChartListAll"].BringToFront();
         }
     }
 

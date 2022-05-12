@@ -28,7 +28,7 @@ namespace BA_Dashboard
 
             try
             {
-                IPAddress ipAddress = IPAddress.Parse("192.168.0.12");
+                IPAddress ipAddress = IPAddress.Parse("192.168.10.10");
                 int port = 7756;
                 IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
                 ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);

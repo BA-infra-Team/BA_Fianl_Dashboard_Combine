@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
         <Label Grid.Column="0" Content="Avg Elapsed Time" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43" Width="166" FontSize="18" Foreground="Black" FontWeight="Bold"/>
 
-        <Wpf:CartesianChart Grid.Row="1" Grid.Column="1"  Series="{Binding SeriesCollection}" Margin="10,50,10,50" Foreground="Black" Background="White" >
+        <Wpf:CartesianChart Grid.Row="1" Grid.Column="1"  Series="{Binding SeriesCollection}" Margin="10,5,10,5" Foreground="Black" Background="White" >
             <Wpf:CartesianChart.AxisY>
                 <Wpf:Axis Title="Second" LabelFormatter="{Binding YFormatter}"/>
             </Wpf:CartesianChart.AxisY>

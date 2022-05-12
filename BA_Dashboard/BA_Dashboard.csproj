@@ -121,6 +121,12 @@
     <Compile Include="ChartList7.Designer.cs">
       <DependentUpon>ChartList7.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChartListAll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartListAll.Designer.cs">
+      <DependentUpon>ChartListAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chart_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     <Compile Include="row_1_col_1_Line_UC.Designer.cs">
       <DependentUpon>row_1_col_1_Line_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="ChartList1.resx">
       <DependentUpon>ChartList1.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChartList7.resx">
       <DependentUpon>ChartList7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartListAll.resx">
+      <DependentUpon>ChartListAll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Chart_UC.resx">
       <DependentUpon>Chart_UC.cs</DependentUpon>

@@ -19,7 +19,7 @@
         <Label Grid.Column="0" Content="Total Error Ratio" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43" Width="157" FontSize="18" FontWeight="Bold"/>
 
         <lvc:PieChart x:Name="Chart_Copy" Grid.Row="1" Grid.Column="1"  Series="{Binding SeriesCollection1}" 
-            LegendLocation="Bottom" InnerRadius="50" Margin="10,50,10,50" Background="White" FontWeight="Normal">
+            LegendLocation="Bottom" InnerRadius="15" Margin="10,5,10,5" Background="White" FontWeight="Normal">
             <lvc:PieChart.ChartLegend>
                 <lvc:DefaultLegend BulletSize="20"/>
             </lvc:PieChart.ChartLegend>
