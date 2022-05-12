@@ -62,24 +62,21 @@
             this.SecondTopPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
+
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-=======
-            this.row_1_col_1_Line_UC1 = new BA_Dashboard.row_1_col_1_Line_UC();
->>>>>>> origin/jiwoo
+
             this.row_0_col_0_Left_UC1 = new BA_Dashboard.row_0_col_0_Left_UC();
             this.row_0_col_0_Right_UC1 = new BA_Dashboard.row_0_col_0_Right_UC();
             this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
             this.row_0_col_11 = new BA_Dashboard.row_0_col_1();
-<<<<<<< HEAD
+
             this.row_1_col_1_Line_UC1 = new BA_Dashboard.row_1_col_1_Line_UC();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.chart11 = new BA_Dashboard.Chart1();
-=======
->>>>>>> origin/jiwoo
+
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.LeftSidePanel.SuspendLayout();
@@ -495,7 +492,7 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "대시보드";
             // 
-<<<<<<< HEAD
+
             // splitContainer1
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -570,44 +567,28 @@
             // row_0_col_0_Left_UC1
             // 
             this.row_0_col_0_Left_UC1.Dock = System.Windows.Forms.DockStyle.Fill;
-=======
-            // row_1_col_1_Line_UC1
-            // 
-            this.row_1_col_1_Line_UC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row_1_col_1_Line_UC1.Location = new System.Drawing.Point(0, 0);
-            this.row_1_col_1_Line_UC1.Name = "row_1_col_1_Line_UC1";
-            this.row_1_col_1_Line_UC1.Size = new System.Drawing.Size(815, 412);
-            this.row_1_col_1_Line_UC1.TabIndex = 0;
-            // 
-            // row_0_col_0_Left_UC1
-            // 
->>>>>>> origin/jiwoo
+
             this.row_0_col_0_Left_UC1.Location = new System.Drawing.Point(0, 0);
             this.row_0_col_0_Left_UC1.MaximumSize = new System.Drawing.Size(401, 406);
             this.row_0_col_0_Left_UC1.Name = "row_0_col_0_Left_UC1";
             this.row_0_col_0_Left_UC1.onDrag = false;
-<<<<<<< HEAD
+
             this.row_0_col_0_Left_UC1.Size = new System.Drawing.Size(399, 404);
-=======
-            this.row_0_col_0_Left_UC1.Size = new System.Drawing.Size(401, 406);
->>>>>>> origin/jiwoo
+
             this.row_0_col_0_Left_UC1.TabIndex = 0;
             // 
             // row_0_col_0_Right_UC1
             // 
-<<<<<<< HEAD
+
             this.row_0_col_0_Right_UC1.Dock = System.Windows.Forms.DockStyle.Fill;
-=======
->>>>>>> origin/jiwoo
+
             this.row_0_col_0_Right_UC1.Location = new System.Drawing.Point(0, 0);
             this.row_0_col_0_Right_UC1.MaximumSize = new System.Drawing.Size(401, 406);
             this.row_0_col_0_Right_UC1.Name = "row_0_col_0_Right_UC1";
             this.row_0_col_0_Right_UC1.onDrag = false;
-<<<<<<< HEAD
+
             this.row_0_col_0_Right_UC1.Size = new System.Drawing.Size(400, 404);
-=======
-            this.row_0_col_0_Right_UC1.Size = new System.Drawing.Size(401, 406);
->>>>>>> origin/jiwoo
+
             this.row_0_col_0_Right_UC1.TabIndex = 0;
             // 
             // elementHost2
@@ -615,16 +596,14 @@
             this.elementHost2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elementHost2.Location = new System.Drawing.Point(0, 0);
             this.elementHost2.Name = "elementHost2";
-<<<<<<< HEAD
+
             this.elementHost2.Size = new System.Drawing.Size(825, 410);
-=======
-            this.elementHost2.Size = new System.Drawing.Size(815, 412);
->>>>>>> origin/jiwoo
+
             this.elementHost2.TabIndex = 0;
             this.elementHost2.Text = "elementHost2";
             this.elementHost2.Child = this.row_0_col_11;
             // 
-<<<<<<< HEAD
+
             // row_1_col_1_Line_UC1
             // 
             this.row_1_col_1_Line_UC1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -643,8 +622,7 @@
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.chart11;
             // 
-=======
->>>>>>> origin/jiwoo
+
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);

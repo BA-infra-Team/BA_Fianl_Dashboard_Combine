@@ -93,20 +93,13 @@ namespace BA_Dashboard
                 Buffer = new byte[4096];
                 //MessageBox.Show("Received: {responseData}", responseData);
 
-<<<<<<< HEAD
-            Buffer = new byte[4096];
-            rev = 0;
-            rev = ClientSocket.Receive(Buffer, 0);
-            //rev = ClientSocket.Receive(Buffer, 0);
-            BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName,
-            FileMode.Create, FileAccess.Write));
-=======
+
                 // 첫 파일 구조체 정보 
                 rev = ClientSocket.Receive(Buffer, 0, 23, 0);
                 int fileNameLen = BitConverter.ToInt32(Buffer, 0);
                 string fileName = Encoding.ASCII.GetString(Buffer, 4, fileNameLen);
                 int fileSize = BitConverter.ToInt32(Buffer, 4 + fileNameLen + 1);
->>>>>>> origin/jiwoo
+
 
                 Buffer = new byte[4096];
                 rev = 0;
@@ -191,39 +184,7 @@ namespace BA_Dashboard
             {
                 ContentPanel.Controls["Error_UC"].SendToBack();
             }
-<<<<<<< HEAD
-            if(ContentPanel.Controls.ContainsKey("ChartListAll"))
-            {
-                ContentPanel.Controls["ChartListAll"].SendToBack();
-            }
-            if (plnchart.Controls.ContainsKey("ChartList1"))
-            {
-                ContentPanel.Controls["Form1"].BringToFront();
-            }
-            if (ContentPanel.Controls.ContainsKey("ChartList2"))
-            {
-                ContentPanel.Controls["ChartList2"].SendToBack();
-            }
-            if (ContentPanel.Controls.ContainsKey("ChartList3"))
-            {
-                ContentPanel.Controls["ChartList3"].SendToBack();
-            }
-            if (ContentPanel.Controls.ContainsKey("ChartList4"))
-            {
-                ContentPanel.Controls["ChartList4"].SendToBack();
-            }
-            if (ContentPanel.Controls.ContainsKey("ChartList5"))
-            {
-                ContentPanel.Controls["ChartList5"].SendToBack();
-            }
-            if (ContentPanel.Controls.ContainsKey("ChartList6"))
-            {
-                ContentPanel.Controls["ChartList6"].SendToBack();
-            }
-            if (ContentPanel.Controls.ContainsKey("ChartList7"))
-            {
-                ContentPanel.Controls["ChartList7"].SendToBack();
-=======
+
             if (ContentPanel.Controls.ContainsKey("ChartList1"))
             {
                 ContentPanel.Controls["ChartList1"].SendToBack();
@@ -256,7 +217,7 @@ namespace BA_Dashboard
             if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList7"])
             {
                 Form1.Instance.plnchart.Controls[0].SendToBack();
->>>>>>> origin/jiwoo
+
             }
         }
 
@@ -346,21 +307,13 @@ namespace BA_Dashboard
 
             if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart1")
             {
-<<<<<<< HEAD
+
                 Form1.Instance.elementHost1.Child = new Chart2();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart2")
-=======
-                ChartList2_2 c2 = new ChartList2_2();
-                c2.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c2);
-                Form1.Instance.panelcontainer.Controls["ChartList2_2"].BringToFront();
-                Form1.Instance.button5.Visible = true;
-            }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2_2"])
->>>>>>> origin/jiwoo
+
             {
                 Form1.Instance.elementHost1.Child = new Chart3();
                 Form1.Instance.elementHost1.BringToFront();
@@ -380,22 +333,16 @@ namespace BA_Dashboard
 
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart4")
             {
-<<<<<<< HEAD
+
                 Form1.Instance.elementHost1.Child = new Chart5();
                 Form1.Instance.elementHost1.BringToFront();
-=======
-                ChartList5_2 c5 = new ChartList5_2();
-                c5.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c5);
 
-                Form1.Instance.panelcontainer.Controls["ChartList5_2"].BringToFront();
->>>>>>> origin/jiwoo
                 Form1.Instance.button5.Visible = true;
 
 
             }
 
-<<<<<<< HEAD
+
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart5")
             {
                 Form1.Instance.elementHost1.Child = new Chart6();
@@ -404,31 +351,16 @@ namespace BA_Dashboard
 
             }
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart6")
-=======
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5_2"])
-            {
-                ChartList6_2 c6 = new ChartList6_2();
-                c6.Dock = DockStyle.Fill;
-                Form1.Instance.panelcontainer.Controls.Add(c6);
 
-                Form1.Instance.panelcontainer.Controls["ChartList6_2"].BringToFront();
-                Form1.Instance.button5.Visible = true;
-
-            }
-            else if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6_2"])
->>>>>>> origin/jiwoo
             {
                 Form1.Instance.elementHost1.Child = new Chart7();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
             }
-<<<<<<< HEAD
-            else if(Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart7")
-=======
 
-            else
->>>>>>> origin/jiwoo
+            else if(Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart7")
+
             {
                 Form1.Instance.elementHost1.Child = new Chart1();
                 Form1.Instance.elementHost1.BringToFront();

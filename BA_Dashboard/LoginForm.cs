@@ -30,21 +30,17 @@ namespace BA_Dashboard
             Password = Pwd_textbox.Text;
 
 
-            IPAddress ipAddress = IPAddress.Parse("192.168.10.10");
-            int port = 7756;
-            IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
-            ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+
 
             try
             {
-<<<<<<< HEAD
+
                 IPAddress ipAddress = IPAddress.Parse("192.168.10.10");
                 int port = 7756;
                 IPEndPoint iPEndPoint = new IPEndPoint(ipAddress, port);
                 ClientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 
-=======
->>>>>>> origin/jiwoo
+
                 ClientSocket.Connect(iPEndPoint);
             }
             catch (Exception err)
