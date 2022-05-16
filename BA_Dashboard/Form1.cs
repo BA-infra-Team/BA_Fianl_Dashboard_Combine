@@ -147,6 +147,7 @@ namespace BA_Dashboard
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             _obj = this;
             row_1_col_1_Line_UC r_1_c_1_UChome = new row_1_col_1_Line_UC();
             r_1_c_1_UChome.Dock = DockStyle.Fill;
@@ -156,6 +157,7 @@ namespace BA_Dashboard
             ChartList1 c1 = new ChartList1();
             c1.Dock = DockStyle.Fill;
             panelcontainer.Controls.Add(c1);
+
 
         }
 
@@ -253,7 +255,6 @@ namespace BA_Dashboard
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
-
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart2")
             {
                 Form1.Instance.elementHost1.Child = new Chart1();
@@ -265,8 +266,6 @@ namespace BA_Dashboard
                 Form1.Instance.elementHost1.Child = new Chart2();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
-
-
             }
 
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart4")
@@ -304,7 +303,6 @@ namespace BA_Dashboard
         //Next 버튼 클릭
         private void button6_Click(object sender, EventArgs e)
         {
-
             if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart1")
             {
 
@@ -318,8 +316,6 @@ namespace BA_Dashboard
                 Form1.Instance.elementHost1.Child = new Chart3();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
-
-
             }
 
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart3")
@@ -333,13 +329,10 @@ namespace BA_Dashboard
 
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart4")
             {
-
                 Form1.Instance.elementHost1.Child = new Chart5();
                 Form1.Instance.elementHost1.BringToFront();
 
                 Form1.Instance.button5.Visible = true;
-
-
             }
 
 
@@ -449,21 +442,37 @@ namespace BA_Dashboard
         //All 버튼
         private void button2_Click(object sender, EventArgs e)
         {
-            if (!ContentPanel.Controls.ContainsKey("ChartListAll"))
+            if (!ContentPanel.Controls.ContainsKey("ChartAll"))
+            {
+                ChartAll chartall = new ChartAll();
+                chartall.Dock = DockStyle.Fill;
+                ContentPanel.Controls.Add(chartall);
+                //chartall.button1.Visible = true;
+                //chartall.button3.Visible = false;
+                //chartall.button5.Visible = false;
+                //chartall.button7.Visible = false;
+                //chartall.button9.Visible = false;
+                //chartall.button11.Visible = false;
+                //chartall.button13.Visible = false;
+                //chartall.button2.Visible = true;
+            }
+            ContentPanel.Controls["ChartAll"].BringToFront();
+
+            /*if (!ContentPanel.Controls.ContainsKey("ChartListAll"))
             {
                 ChartListAll chartall = new ChartListAll();
                 chartall.Dock = DockStyle.Fill;
                 ContentPanel.Controls.Add(chartall);
                 //chartall.button1.Visible = true;
-                chartall.button3.Visible = false;
-                chartall.button5.Visible = false;
-                chartall.button7.Visible = false;
-                chartall.button9.Visible = false;
-                chartall.button11.Visible = false;
-                chartall.button13.Visible = false;
-                chartall.button2.Visible = true;
+                //chartall.button3.Visible = false;
+                //chartall.button5.Visible = false;
+                //chartall.button7.Visible = false;
+                //chartall.button9.Visible = false;
+                //chartall.button11.Visible = false;
+                //chartall.button13.Visible = false;
+                //chartall.button2.Visible = true;
             }
-            ContentPanel.Controls["ChartListAll"].BringToFront();
+            ContentPanel.Controls["ChartListAll"].BringToFront();*/
         }
     }
 

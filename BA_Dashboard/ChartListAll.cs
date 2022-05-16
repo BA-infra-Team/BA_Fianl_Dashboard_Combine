@@ -120,6 +120,12 @@ namespace BA_Dashboard
         public ChartListAll()
         {
             InitializeComponent();
+
+            LineChart linechart = new LineChart();
+            linechart.TopLevel = false;
+            this.Controls.Add(linechart);
+
+            linechart.Show();
         }
 
         private void ChartListAll_Load(object sender, EventArgs e)
@@ -132,7 +138,7 @@ namespace BA_Dashboard
             this.button9.Visible = false;
             this.button11.Visible = false;
             this.button13.Visible = false;
-
+            
         }
 
         private void button2_MouseDown(object sender, MouseEventArgs e)

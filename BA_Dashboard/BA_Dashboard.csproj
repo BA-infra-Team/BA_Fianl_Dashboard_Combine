@@ -79,6 +79,12 @@
     <Compile Include="Chart7.xaml.cs">
       <DependentUpon>Chart7.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChartAll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartAll.Designer.cs">
+      <DependentUpon>ChartAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChartList1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,6 +139,12 @@
     <Compile Include="Chart_UC.Designer.cs">
       <DependentUpon>Chart_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="ColumnChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColumnChart.Designer.cs">
+      <DependentUpon>ColumnChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Error_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,14 +163,44 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GaugeChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GaugeChart.Designer.cs">
+      <DependentUpon>GaugeChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LineChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineChart.Designer.cs">
+      <DependentUpon>LineChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PercentageStackedChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PercentageStackedChart.Designer.cs">
+      <DependentUpon>PercentageStackedChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PieChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PieChart.Designer.cs">
+      <DependentUpon>PieChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RowChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RowChart.Designer.cs">
+      <DependentUpon>RowChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="row_0_col_0.xaml.cs">
       <DependentUpon>row_0_col_0.xaml</DependentUpon>
     </Compile>
@@ -204,9 +246,18 @@
     <Compile Include="row_1_col_1_Line_UC.Designer.cs">
       <DependentUpon>row_1_col_1_Line_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="StackedColumnChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StackedColumnChart.Designer.cs">
+      <DependentUpon>StackedColumnChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransparentPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="ChartAll.resx">
+      <DependentUpon>ChartAll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartList1.resx">
       <DependentUpon>ChartList1.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +285,9 @@
     <EmbeddedResource Include="Chart_UC.resx">
       <DependentUpon>Chart_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ColumnChart.resx">
+      <DependentUpon>ColumnChart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Error_UC.resx">
       <DependentUpon>Error_UC.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,8 +297,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GaugeChart.resx">
+      <DependentUpon>GaugeChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LineChart.resx">
+      <DependentUpon>LineChart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PercentageStackedChart.resx">
+      <DependentUpon>PercentageStackedChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PieChart.resx">
+      <DependentUpon>PieChart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -255,6 +321,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RowChart.resx">
+      <DependentUpon>RowChart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="row_0_col_0_Left_UC.resx">
       <DependentUpon>row_0_col_0_Left_UC.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="row_1_col_1_Line_UC.resx">
       <DependentUpon>row_1_col_1_Line_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StackedColumnChart.resx">
+      <DependentUpon>StackedColumnChart.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

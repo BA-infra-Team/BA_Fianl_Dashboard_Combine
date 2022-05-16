@@ -29,5 +29,6 @@ namespace BA_Dashboard
             Gauge2_Files_Value = ChartData.File_Statistics_PieChart_Total_Write_Size.ToString();
             DataContext = this;
         }
+
     }
 }
