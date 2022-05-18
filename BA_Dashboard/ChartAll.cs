@@ -10,250 +10,277 @@ using System.Windows.Forms;
 
 namespace BA_Dashboard
 {
+
     public partial class ChartAll : UserControl
     {
-        //void listall(object sender, EventArgs e)
-        //{
-        //    if (!panel1.Controls.ContainsKey("ChartListAll"))
-        //    {
-        //        ChartListAll chartlistall = new ChartListAll();
-        //        chartlistall.Dock = DockStyle.Fill;
-        //        panel1.Controls.Add(chartlistall);
-        //        //chartlistall.button1.Visible = true;
-        //        chartlistall.button2.Visible = true;
+        
+        // new
+        LineChart linechart = new LineChart();
+        GaugeChart gaugechart = new GaugeChart();
+        ColumnChart columnchart = new ColumnChart();
+        PercentageStackedChart perchart = new PercentageStackedChart();
+        PieChart piechart = new PieChart();
+        StackedColumnChart stcolchart = new StackedColumnChart();
+        RowChart rowchart = new RowChart();
+       
+        MenuItem m0 = new MenuItem("All");
+        MenuItem m1 = new MenuItem("linechart");
+        MenuItem m2 = new MenuItem("columnchart");
+        MenuItem m3 = new MenuItem("gaugechart");
+        MenuItem m4 = new MenuItem("perchart");
+        MenuItem m5 = new MenuItem("rowchart");
+        MenuItem m6 = new MenuItem("stcolchart");
+        MenuItem m7 = new MenuItem("piechart");
 
-        //    }
-        //    panel1.Controls["ChartListAll"].BringToFront();
-        //}
-        //void list01(object sender, EventArgs e)
-        //{
-        //    if (!panel1.Controls.ContainsKey("ChartList1"))
-        //    {
-        //        ChartList1 chartlist01 = new ChartList1();
-        //        chartlist01.Dock = DockStyle.Fill;
-        //        panel1.Controls.Add(chartlist01);
-        //        //chartlist01.button1.Visible = true;
-        //        chartlist01.button2.Visible = true;
-        //    }
-        //    panel1.Controls["ChartList1"].BringToFront();
-        //}
+        
 
-        //void list02(object sender, EventArgs e)
-        //{
-        //    if (!panel1.Controls.ContainsKey("ChartList2"))
-        //    {
-        //        ChartList2 chartlist02 = new ChartList2();
-        //        chartlist02.Dock = DockStyle.Fill;
-        //        panel1.Controls.Add(chartlist02);
-        //        //chartlist02.button1.Visible = true;
-        //        chartlist02.button2.Visible = true;
-        //    }
-        //    panel1.Controls["ChartList2"].BringToFront();
-        //}
-
-        //void list03(object sender, EventArgs e)
-        //{
-        //    if (!panel1.Controls.ContainsKey("ChartList3"))
-        //    {
-        //        ChartList3 chartlist03 = new ChartList3();
-        //        chartlist03.Dock = DockStyle.Fill;
-        //        panel1.Controls.Add(chartlist03);
-        //        //chartlist03.button1.Visible = true;
-        //        chartlist03.button2.Visible = true;
-        //    }
-        //    panel1.Controls["ChartList3"].BringToFront();
-        //}
-
-        //void list04(object sender, EventArgs e)
-        //{
-        //    if (!panel1.Controls.ContainsKey("ChartList4"))
-        //    {
-        //        ChartList4 chartlist04 = new ChartList4();
-        //        chartlist04.Dock = DockStyle.Fill;
-        //        panel1.Controls.Add(chartlist04);
-        //        //chartlist04.button1.Visible = true;
-        //        chartlist04.button2.Visible = true;
-        //    }
-        //    panel1.Controls["ChartList4"].BringToFront();
-        //}
-
-        //void list05(object sender, EventArgs e)
-        //{
-        //    if (!panel1.Controls.ContainsKey("ChartList5"))
-        //    {
-        //        ChartList5 chartlist05 = new ChartList5();
-        //        chartlist05.Dock = DockStyle.Fill;
-        //        panel1.Controls.Add(chartlist05);
-        //        //chartlist05.button1.Visible = true;
-        //        chartlist05.button2.Visible = true;
-        //    }
-        //    panel1.Controls["ChartList5"].BringToFront();
-        //}
-
-        //void list06(object sender, EventArgs e)
-        //{
-        //    if (!panel1.Controls.ContainsKey("ChartList6"))
-        //    {
-        //        ChartList6 chartlist06 = new ChartList6();
-        //        chartlist06.Dock = DockStyle.Fill;
-        //        panel1.Controls.Add(chartlist06);
-        //        //chartlist06.button1.Visible = true;
-        //        chartlist06.button2.Visible = true;
-        //    }
-        //    panel1.Controls["ChartList6"].BringToFront();
-        //}
-
-        //void list07(object sender, EventArgs e)
-        //{
-        //    if (!panel1.Controls.ContainsKey("ChartList7"))
-        //    {
-        //        ChartList7 chartlist07 = new ChartList7();
-        //        chartlist07.Dock = DockStyle.Fill;
-        //        panel1.Controls.Add(chartlist07);
-        //        //chartlist07.button1.Visible = true;
-        //        chartlist07.button2.Visible = true;
-        //    }
-        //    panel1.Controls["ChartList7"].BringToFront();
-        //}
-        /*void listall(object sender, EventArgs e)
+        void listall(object sender, EventArgs e)
         {
-            if (!panel1.Controls.ContainsKey("ChartListAll"))
+            
+            /* if(Checked == true)
+             {
+
+             }
+             else
+             {
+                 m0.Checked = true;
+                 
+                 panel1.Controls["ChartAll"].BringToFront();
+             }*/
+            ChartAll chartall = new ChartAll();
+            if (!panel1.Controls.ContainsKey("ChartAll"))
             {
-                ChartListAll chartlistall = new ChartListAll();
-                chartlistall.Dock = DockStyle.Fill;
-                panel1.Controls.Add(chartlistall);
+
+                chartall.Dock = DockStyle.Fill;
+                panel1.Controls.Add(chartall);
                 //chartlistall.button1.Visible = true;
-                chartlistall.button2.Visible = true;
+
 
             }
-            panel1.Controls["ChartListAll"].BringToFront();
-        }*/
-        //Point point = new Point();
+            panel1.Controls["ChartAll"].BringToFront();
+        }
+
+        void linechart1(object sender, EventArgs e)
+        {
+            if (m1.Checked == true)
+            {
+                linechart.WindowState = FormWindowState.Minimized;
+                m1.Checked = false;
+            }
+            else
+            {
+                m1.Checked = true;
+                linechart.WindowState = FormWindowState.Normal;
+
+            }            
+
+        }
+
+        void columnchart1(object sender, EventArgs e)
+        {
+            if (m2.Checked == true)
+            {
+                columnchart.WindowState = FormWindowState.Minimized;
+                m2.Checked = false;
+            }
+            else
+            {
+                m2.Checked = true;
+                columnchart.WindowState = FormWindowState.Normal;
+
+            }
+
+        }
+        
+
+        void gaugechart1(object sender, EventArgs e)
+        {
+            //MessageBox.Show(gaugechart.ToString());
+            //if (gaugechart.WindowState == FormWindowState.Minimized)
+            //{
+            //    m3.Checked = false;
+            //}
+
+            if (m3.Checked == true)
+            {                
+                gaugechart.WindowState = FormWindowState.Minimized;
+                m3.Checked = false;
+            }
+            else
+            {
+                m3.Checked = true;
+                gaugechart.WindowState = FormWindowState.Normal;
+                
+            }
+
+        }
+        void perchart1(object sender, EventArgs e)
+        {
+            if (m4.Checked == true)
+            {
+                perchart.WindowState = FormWindowState.Minimized;
+                m4.Checked = false;
+            }
+            else
+            {
+                m4.Checked = true;
+                perchart.WindowState = FormWindowState.Normal;
+
+            }
+
+        }
+
+        void rowchart1(object sender, EventArgs e)
+        {
+            if (m5.Checked == true)
+            {
+                rowchart.WindowState = FormWindowState.Minimized;
+                m5.Checked = false;
+            }
+            else
+            {
+                m5.Checked = true;
+                rowchart.WindowState = FormWindowState.Normal;
+
+            }
+
+        }
+
+        void stcolchart1(object sender, EventArgs e)
+        {
+            if (m6.Checked == true)
+            {
+                stcolchart.WindowState = FormWindowState.Minimized;
+                m6.Checked = false;
+            }
+            else
+            {
+                m6.Checked = true;
+                stcolchart.WindowState = FormWindowState.Normal;
+
+            }
+
+        }
+
+        void piechart1(object sender, EventArgs e)
+        {
+            if (m7.Checked == true)
+            {
+                piechart.WindowState = FormWindowState.Minimized;
+                m7.Checked = false;
+            }
+            else
+            {
+                m7.Checked = true;
+                piechart.WindowState = FormWindowState.Normal;
+
+            }
+
+        }
+
+
+        Point point = new Point();
+
+
+        //public GaugeChart gchart;
+
         public ChartAll()
         {
             InitializeComponent();
-
-           /* LineChart linechart = new LineChart();
-            linechart.TopLevel = false;
-            this.Controls.Add(linechart);
-
-            linechart.Show();
-
-            linechart.Location = new Point(0,0);
-
-            ColumnChart columnchart = new ColumnChart();
-            columnchart.TopLevel = false;
-            this.Controls.Add(columnchart);
-
-            columnchart.Show();
-
-            columnchart.Location = new Point(817, 0);
-
-            GaugeChart gaugechart = new GaugeChart();
-            gaugechart.TopLevel = false;
-            this.Controls.Add(gaugechart);
-
-            gaugechart.Show();
-
-            gaugechart.Location = new Point(0, 193);
-
-            PercentageStackedChart perchart = new PercentageStackedChart();
-            perchart.TopLevel = false;
-            this.Controls.Add(perchart);
-
-            perchart.Show();
-
-            perchart.Location = new Point(817, 193);
-
-            RowChart rowchart = new RowChart();
-            rowchart.TopLevel = false;
-            this.Controls.Add(rowchart);
-
-            rowchart.Show();
-
-            rowchart.Location = new Point(0, 386);
-
-            StackedColumnChart stcolchart = new StackedColumnChart();
-            stcolchart.TopLevel = false;
-            this.Controls.Add(stcolchart);
-
-            stcolchart.Show();
-
-            stcolchart.Location = new Point(817, 386);
-
-            PieChart piechart = new PieChart();
-            piechart.TopLevel = false;
-            this.Controls.Add(piechart);
-
-            piechart.Show();
-
-            piechart.Location = new Point(0, 579);*/
+           
         }
+       
 
        
 
         private void ChartAll_Load(object sender, EventArgs e)
         {
-            LineChart linechart = new LineChart();
+            m0.Click += new EventHandler(listall);
+            m0.Checked = true;
+
+            //LineChart
             linechart.TopLevel = false;
-            this.Controls.Add(linechart);
+            panel1.Controls.Add(linechart);
             
             linechart.Location = new Point(0, 0);
             linechart.Show();
 
-            
 
-            ColumnChart columnchart = new ColumnChart();
+            m1.Click += new EventHandler(linechart1);
+
+            m1.Checked = true;
+
+
+            //ColumnChart
             columnchart.TopLevel = false;
-            this.Controls.Add(columnchart);
+            panel1.Controls.Add(columnchart);
 
             columnchart.Show();
 
             columnchart.Location = new Point(817, 0);
+            m2.Click += new EventHandler(columnchart1);
+            m2.Checked = true;
 
-            GaugeChart gaugechart = new GaugeChart();
+           //GaugeChart
             gaugechart.TopLevel = false;
-            this.Controls.Add(gaugechart);
+            panel1.Controls.Add(gaugechart);
 
             gaugechart.Show();
 
             gaugechart.Location = new Point(0, 193);
 
-            PercentageStackedChart perchart = new PercentageStackedChart();
+            
+
+            m3.Click += new EventHandler(gaugechart1);
+            m3.Checked = true;
+
+            //PercentageStackedChart
             perchart.TopLevel = false;
-            this.Controls.Add(perchart);
+            panel1.Controls.Add(perchart);
 
             perchart.Show();
 
             perchart.Location = new Point(817, 193);
+            
+            m4.Click += new EventHandler(perchart1);
+            m4.Checked = true;
 
-            RowChart rowchart = new RowChart();
+            //RowChart
             rowchart.TopLevel = false;
-            this.Controls.Add(rowchart);
+            panel1.Controls.Add(rowchart);
 
             rowchart.Show();
 
             rowchart.Location = new Point(0, 386);
+            m5.Click += new EventHandler(rowchart1);
+            m5.Checked = true;
 
-            StackedColumnChart stcolchart = new StackedColumnChart();
+            //StackedColumnChart
             stcolchart.TopLevel = false;
-            this.Controls.Add(stcolchart);
+            panel1.Controls.Add(stcolchart);
 
             stcolchart.Show();
 
             stcolchart.Location = new Point(817, 386);
+            m6.Click += new EventHandler(stcolchart1);
+            m6.Checked = true;
 
-            PieChart piechart = new PieChart();
+            //PieChart
             piechart.TopLevel = false;
-            this.Controls.Add(piechart);
+            panel1.Controls.Add(piechart);
 
             piechart.Show();
 
             piechart.Location = new Point(0, 579);
+            m7.Click += new EventHandler(piechart1);
+            m7.Checked = true;
         }
-        private void ChartAll_MouseDown(object sender, MouseEventArgs e)
+
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
 
+            
             if (e.Button == MouseButtons.Right)
             {
                 ContextMenu ctms = new ContextMenu(); //메뉴 스트립 추가
@@ -262,48 +289,81 @@ namespace BA_Dashboard
                 //ctms.MenuItems.Add("ChartList1");
                 ctms.Show(this, mousePoint);//마우스 클릭된 위치에 스트립 메뉴를 보여준다
 
-                //MenuItem m0 = new MenuItem("All");
-                //MenuItem m1 = new MenuItem("ChartList1");
-                //MenuItem m2 = new MenuItem("ChartList2");
-                //MenuItem m3 = new MenuItem("ChartList3");
-                //MenuItem m4 = new MenuItem("ChartList4");
-                //MenuItem m5 = new MenuItem("ChartList5");
-                //MenuItem m6 = new MenuItem("ChartList6");
-                //MenuItem m7 = new MenuItem("ChartList7");
+                //for (int i = 0; i < ContextMenu.MenuItems.Count; i++)
+                //{
+                //    if (ContextMenu.MenuItems[i].Checked == true)
+                //    {
+                        
+                //    }
+                //}
+                if (linechart.WindowState == FormWindowState.Minimized)
+                {
+                    m1.Checked = false;
+                    m0.Checked = false;
+                }
+                if (columnchart.WindowState == FormWindowState.Minimized)
+                {
+                    m2.Checked = false;
+                    m0.Checked = false;
+                }
+                if (gaugechart.WindowState == FormWindowState.Minimized)
+                {
+                    m3.Checked = false;
+                    m0.Checked = false;
+                }
+                if (perchart.WindowState == FormWindowState.Minimized)
+                {
+                    m4.Checked = false;
+                    m0.Checked = false;
+                }
+                if (rowchart.WindowState == FormWindowState.Minimized)
+                {
+                    m5.Checked = false;
+                    m0.Checked = false;
+                }
+                if (stcolchart.WindowState == FormWindowState.Minimized)
+                {
+                    m6.Checked = false;
+                    m0.Checked = false;
+                }
+                if (piechart.WindowState == FormWindowState.Minimized)
+                {
+                    m7.Checked = false;
+                    m0.Checked = false;
+                }
 
-                //ctms.MenuItems.Add(m0);
 
-                //m0.Click += new EventHandler(listall);
-                //ctms.MenuItems.Add(m0);
-                //panel1.ContextMenu = ctms;
+                ctms.MenuItems.Add(m0);
+                panel1.ContextMenu = ctms;
 
-                //m1.Click += new EventHandler(list01);
-                //ctms.MenuItems.Add(m1);
-                //panel1.ContextMenu = ctms;
+                
+                ctms.MenuItems.Add(m1);
+                panel1.ContextMenu = ctms;
 
-                //m2.Click += new EventHandler(list02);
-                //ctms.MenuItems.Add(m2);
-                //panel1.ContextMenu = ctms;
+ 
+                ctms.MenuItems.Add(m2);
+                panel1.ContextMenu = ctms;
 
-                //m3.Click += new EventHandler(list03);
-                //ctms.MenuItems.Add(m3);
-                //panel1.ContextMenu = ctms;
+                
+                ctms.MenuItems.Add(m3);
+                panel1.ContextMenu = ctms;
 
-                //m4.Click += new EventHandler(list04);
-                //ctms.MenuItems.Add(m4);
-                //panel1.ContextMenu = ctms;
 
-                //m5.Click += new EventHandler(list05);
-                //ctms.MenuItems.Add(m5);
-                //panel1.ContextMenu = ctms;
+                
+                ctms.MenuItems.Add(m4);
+                panel1.ContextMenu = ctms;
 
-                //m6.Click += new EventHandler(list06);
-                //ctms.MenuItems.Add(m6);
-                //panel1.ContextMenu = ctms;
 
-                //m7.Click += new EventHandler(list07);
-                //ctms.MenuItems.Add(m7);
-                //panel1.ContextMenu = ctms;
+                ctms.MenuItems.Add(m5);
+                panel1.ContextMenu = ctms;
+
+
+                ctms.MenuItems.Add(m6);
+                panel1.ContextMenu = ctms;
+
+
+                ctms.MenuItems.Add(m7);
+                panel1.ContextMenu = ctms;
             }
         }
     }

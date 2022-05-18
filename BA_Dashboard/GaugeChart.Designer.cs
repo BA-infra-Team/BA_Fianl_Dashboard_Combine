@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.transparentPanel1 = new BA_Dashboard.TransparentPanel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.chart31 = new BA_Dashboard.Chart3();
-            this.transparentPanel1 = new BA_Dashboard.TransparentPanel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +45,15 @@
             this.panel1.Size = new System.Drawing.Size(798, 151);
             this.panel1.TabIndex = 0;
             // 
+            // transparentPanel1
+            // 
+            this.transparentPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.transparentPanel1.Location = new System.Drawing.Point(0, 0);
+            this.transparentPanel1.Name = "transparentPanel1";
+            this.transparentPanel1.Size = new System.Drawing.Size(798, 151);
+            this.transparentPanel1.TabIndex = 2;
+            this.transparentPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.transparentPanel1_MouseDown);
+            // 
             // elementHost1
             // 
             this.elementHost1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -55,15 +64,6 @@
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.chart31;
             // 
-            // transparentPanel1
-            // 
-            this.transparentPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.transparentPanel1.Location = new System.Drawing.Point(0, 0);
-            this.transparentPanel1.Name = "transparentPanel1";
-            this.transparentPanel1.Size = new System.Drawing.Size(798, 151);
-            this.transparentPanel1.TabIndex = 2;
-            this.transparentPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.transparentPanel1_MouseDown);
-            // 
             // GaugeChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -73,6 +73,7 @@
             this.Location = new System.Drawing.Point(0, 193);
             this.Name = "GaugeChart";
             this.Text = "GaugeChart";
+
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

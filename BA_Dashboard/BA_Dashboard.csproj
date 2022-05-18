@@ -58,6 +58,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="all.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="all.Designer.cs">
+      <DependentUpon>all.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chart1.xaml.cs">
       <DependentUpon>Chart1.xaml</DependentUpon>
     </Compile>
@@ -255,6 +261,9 @@
     <Compile Include="TransparentPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="all.resx">
+      <DependentUpon>all.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartAll.resx">
       <DependentUpon>ChartAll.cs</DependentUpon>
     </EmbeddedResource>

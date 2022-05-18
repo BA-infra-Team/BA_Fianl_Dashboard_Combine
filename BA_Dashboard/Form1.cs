@@ -9,8 +9,9 @@ namespace BA_Dashboard
 {
     public partial class Form1 : Form
     {
+        ChartAll ca = new ChartAll();
         static Form1 _obj;
-        public static Socket ClientSocket;
+        public static Socket ClientSocket;        
         public static Form1 Instance
         {
             get
@@ -106,7 +107,7 @@ namespace BA_Dashboard
                 rev = ClientSocket.Receive(Buffer, 0);
                 //rev = ClientSocket.Receive(Buffer, 0);
                 BinaryWriter bWrite = new BinaryWriter(File.Open(filepath + fileName,
-    FileMode.Create, FileAccess.Write));
+                FileMode.Create, FileAccess.Write));
 
                 bWrite.Write(Buffer, 0, rev);
                 bWrite.Close();
@@ -136,9 +137,7 @@ namespace BA_Dashboard
             {
                 this.Close();
             }   
-
-            
-
+                        
             Chart_UC chart_UC = new Chart_UC();
             Error_UC error_UC = new Error_UC();
             Filtering_UC Filter_UC = new Filtering_UC();
@@ -174,52 +173,13 @@ namespace BA_Dashboard
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
-            if (ContentPanel.Controls.ContainsKey("Filtering_UC"))
+            if(ContentPanel.Controls[0] != panel1)
             {
-                ContentPanel.Controls["Filtering_UC"].SendToBack();
+                panel1.BringToFront();
             }
-            if (ContentPanel.Controls.ContainsKey("Chart_UC"))
+            if(Form1.Instance.plnchart.Controls[0].ToString() != "Systems.Windows.Forms.SplitContainer")
             {
-                ContentPanel.Controls["Chart_UC"].SendToBack();
-            }
-            if (ContentPanel.Controls.ContainsKey("Error_UC"))
-            {
-                ContentPanel.Controls["Error_UC"].SendToBack();
-            }
-
-            if (ContentPanel.Controls.ContainsKey("ChartList1"))
-            {
-                ContentPanel.Controls["ChartList1"].SendToBack();
-            }
-
-            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList1"])
-            {
-                Form1.Instance.plnchart.Controls[0].SendToBack();
-            }
-            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList2"])
-            {
-                Form1.Instance.plnchart.Controls[0].SendToBack();
-            }
-            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList3"])
-            {
-                Form1.Instance.plnchart.Controls[0].SendToBack();
-            }
-            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList4"])
-            {
-                Form1.Instance.plnchart.Controls[0].SendToBack();
-            }
-            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList5"])
-            {
-                Form1.Instance.plnchart.Controls[0].SendToBack();
-            }
-            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList6"])
-            {
-                Form1.Instance.plnchart.Controls[0].SendToBack();
-            }
-            if (Form1.Instance.panelcontainer.Controls[0] == Form1.Instance.panelcontainer.Controls["ChartList7"])
-            {
-                Form1.Instance.plnchart.Controls[0].SendToBack();
-
+                plnchart.Controls[0].SendToBack();
             }
         }
 
@@ -249,6 +209,7 @@ namespace BA_Dashboard
         //back 버튼 클릭
         private void button5_Click(object sender, EventArgs e)
         {
+            
             if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart1")
             {
                 Form1.Instance.elementHost1.Child = new Chart7();
@@ -273,8 +234,6 @@ namespace BA_Dashboard
                 Form1.Instance.elementHost1.Child = new Chart3();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
-
-
             }
 
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart5")
@@ -282,7 +241,6 @@ namespace BA_Dashboard
                 Form1.Instance.elementHost1.Child = new Chart4();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
-
             }
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart6")
             {
@@ -296,8 +254,11 @@ namespace BA_Dashboard
                 Form1.Instance.elementHost1.Child = new Chart6();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
-
             }
+            //for (int i = 0; i < elementHost1.Child.; i++)
+            //{
+
+            //}
         }
 
         //Next 버튼 클릭
@@ -438,7 +399,7 @@ namespace BA_Dashboard
                 c7.button2.Visible = true;
             }
         }
-
+        
         //All 버튼
         private void button2_Click(object sender, EventArgs e)
         {
@@ -447,16 +408,20 @@ namespace BA_Dashboard
                 ChartAll chartall = new ChartAll();
                 chartall.Dock = DockStyle.Fill;
                 ContentPanel.Controls.Add(chartall);
-                //chartall.button1.Visible = true;
-                //chartall.button3.Visible = false;
-                //chartall.button5.Visible = false;
-                //chartall.button7.Visible = false;
-                //chartall.button9.Visible = false;
-                //chartall.button11.Visible = false;
-                //chartall.button13.Visible = false;
-                //chartall.button2.Visible = true;
+
             }
             ContentPanel.Controls["ChartAll"].BringToFront();
+
+            //if (!ContentPanel.Controls.ContainsKey("all"))
+            //{
+            //    all al = new all();
+            //    al.Dock = DockStyle.Fill;
+            //    ContentPanel.Controls.Add(al);
+
+            //}
+            //ContentPanel.Controls["all"].BringToFront();
+            //all al = new all();
+            //al.Show();
 
             /*if (!ContentPanel.Controls.ContainsKey("ChartListAll"))
             {

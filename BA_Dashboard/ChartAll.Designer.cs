@@ -28,20 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1089, 455);
+            this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // ChartAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Name = "ChartAll";
             this.Size = new System.Drawing.Size(1089, 455);
             this.Load += new System.EventHandler(this.ChartAll_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ChartAll_MouseDown);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        public System.Windows.Forms.Panel panel1;
     }
 }
