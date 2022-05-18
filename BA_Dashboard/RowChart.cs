@@ -15,6 +15,7 @@ namespace BA_Dashboard
         public RowChart()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
     }
 }

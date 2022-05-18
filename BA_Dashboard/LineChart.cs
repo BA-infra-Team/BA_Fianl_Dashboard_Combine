@@ -15,6 +15,7 @@ namespace BA_Dashboard
         public LineChart()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
     }
 }

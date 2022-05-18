@@ -15,6 +15,7 @@ namespace BA_Dashboard
         public PieChart()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
     }
 }

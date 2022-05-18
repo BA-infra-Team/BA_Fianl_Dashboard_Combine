@@ -15,6 +15,7 @@ namespace BA_Dashboard
         public PercentageStackedChart()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
     }
 }

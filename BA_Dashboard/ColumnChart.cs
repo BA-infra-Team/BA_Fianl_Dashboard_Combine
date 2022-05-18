@@ -15,6 +15,7 @@ namespace BA_Dashboard
         public ColumnChart()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
     }
 }

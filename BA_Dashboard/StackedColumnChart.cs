@@ -15,6 +15,7 @@ namespace BA_Dashboard
         public StackedColumnChart()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
     }
 }
