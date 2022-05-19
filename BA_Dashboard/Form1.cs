@@ -9,9 +9,11 @@ namespace BA_Dashboard
 {
     public partial class Form1 : Form
     {
-        ChartAll ca = new ChartAll();
+        static ChartAll ca = new ChartAll();
         static Form1 _obj;
-        public static Socket ClientSocket;        
+        public static Socket ClientSocket;
+        //int total = ca.ContextMenu.MenuItems.Count;
+
         public static Form1 Instance
         {
             get
@@ -142,8 +144,9 @@ namespace BA_Dashboard
             Error_UC error_UC = new Error_UC();
             Filtering_UC Filter_UC = new Filtering_UC();
             
-        }
 
+        }
+        
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -209,56 +212,58 @@ namespace BA_Dashboard
         //back 버튼 클릭
         private void button5_Click(object sender, EventArgs e)
         {
-            
+
             if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart1")
             {
                 Form1.Instance.elementHost1.Child = new Chart7();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
-            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart2")
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart2_2")
             {
                 Form1.Instance.elementHost1.Child = new Chart1();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
-            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart3")
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.UserControl_xaml.Chart3_2_2")
             {
-                Form1.Instance.elementHost1.Child = new Chart2();
+                Form1.Instance.elementHost1.Child = new Chart2_2();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
 
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart4")
             {
-                Form1.Instance.elementHost1.Child = new Chart3();
+                Form1.Instance.elementHost1.Child = new UserControl_xaml.Chart3_2_2();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
 
-            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart5")
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart5_2")
             {
                 Form1.Instance.elementHost1.Child = new Chart4();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
-            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart6")
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart6_2")
             {
-                Form1.Instance.elementHost1.Child = new Chart5();
+                Form1.Instance.elementHost1.Child = new Chart5_2();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
 
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart7")
             {
-                Form1.Instance.elementHost1.Child = new Chart6();
+                Form1.Instance.elementHost1.Child = new Chart6_2();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
-            //for (int i = 0; i < elementHost1.Child.; i++)
-            //{
+            
+            //MessageBox.Show(total.ToString());
+            /*for (int i = 0; i < ca.ContextMenu.MenuItems.Count; i++)
+            {
 
-            //}
+            }*/
         }
 
         //Next 버튼 클릭
@@ -267,19 +272,19 @@ namespace BA_Dashboard
             if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart1")
             {
 
-                Form1.Instance.elementHost1.Child = new Chart2();
+                Form1.Instance.elementHost1.Child = new Chart2_2();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
-            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart2")
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart2_2")
 
             {
-                Form1.Instance.elementHost1.Child = new Chart3();
+                Form1.Instance.elementHost1.Child = new UserControl_xaml.Chart3_2_2();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
             }
 
-            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart3")
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.UserControl_xaml.Chart3_2_2")
             {
                 Form1.Instance.elementHost1.Child = new Chart4();
                 Form1.Instance.elementHost1.BringToFront();
@@ -290,21 +295,21 @@ namespace BA_Dashboard
 
             else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart4")
             {
-                Form1.Instance.elementHost1.Child = new Chart5();
+                Form1.Instance.elementHost1.Child = new Chart5_2();
                 Form1.Instance.elementHost1.BringToFront();
 
                 Form1.Instance.button5.Visible = true;
             }
 
 
-            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart5")
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart5_2")
             {
-                Form1.Instance.elementHost1.Child = new Chart6();
+                Form1.Instance.elementHost1.Child = new Chart6_2();
                 Form1.Instance.elementHost1.BringToFront();
                 Form1.Instance.button5.Visible = true;
 
             }
-            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart6")
+            else if (Form1.Instance.elementHost1.Child.ToString() == "BA_Dashboard.Chart6_2")
 
             {
                 Form1.Instance.elementHost1.Child = new Chart7();

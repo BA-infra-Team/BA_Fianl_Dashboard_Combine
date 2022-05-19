@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.transparentPanel1 = new BA_Dashboard.TransparentPanel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.chart31 = new BA_Dashboard.Chart3();
+            this.chart3_2_21 = new BA_Dashboard.UserControl_xaml.Chart3_2_2();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             this.elementHost1.Size = new System.Drawing.Size(798, 151);
             this.elementHost1.TabIndex = 0;
             this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.chart31;
+            this.elementHost1.Child = this.chart3_2_21;
             // 
             // GaugeChart
             // 
@@ -73,7 +73,6 @@
             this.Location = new System.Drawing.Point(0, 193);
             this.Name = "GaugeChart";
             this.Text = "GaugeChart";
-
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -83,7 +82,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private Chart3 chart31;
         private TransparentPanel transparentPanel1;
+        private UserControl_xaml.Chart3_2_2 chart3_2_21;
     }
 }

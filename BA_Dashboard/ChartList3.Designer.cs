@@ -34,7 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.chart31 = new BA_Dashboard.Chart3();
+            this.chart3_2_21 = new BA_Dashboard.UserControl_xaml.Chart3_2_2();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -97,7 +97,7 @@
             this.elementHost1.Size = new System.Drawing.Size(808, 366);
             this.elementHost1.TabIndex = 4;
             this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.chart31;
+            this.elementHost1.Child = this.chart3_2_21;
             // 
             // ChartList3
             // 
@@ -117,9 +117,9 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private Chart3 chart31;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button button2;
+        private UserControl_xaml.Chart3_2_2 chart3_2_21;
     }
 }

@@ -36,25 +36,12 @@ namespace BA_Dashboard
 
         void listall(object sender, EventArgs e)
         {
-            
-            /* if(Checked == true)
-             {
-
-             }
-             else
-             {
-                 m0.Checked = true;
-                 
-                 panel1.Controls["ChartAll"].BringToFront();
-             }*/
             ChartAll chartall = new ChartAll();
             if (!panel1.Controls.ContainsKey("ChartAll"))
             {
 
                 chartall.Dock = DockStyle.Fill;
                 panel1.Controls.Add(chartall);
-                //chartlistall.button1.Visible = true;
-
 
             }
             panel1.Controls["ChartAll"].BringToFront();
@@ -95,11 +82,6 @@ namespace BA_Dashboard
 
         void gaugechart1(object sender, EventArgs e)
         {
-            //MessageBox.Show(gaugechart.ToString());
-            //if (gaugechart.WindowState == FormWindowState.Minimized)
-            //{
-            //    m3.Checked = false;
-            //}
 
             if (m3.Checked == true)
             {                
@@ -181,17 +163,11 @@ namespace BA_Dashboard
 
         Point point = new Point();
 
-
-        //public GaugeChart gchart;
-
         public ChartAll()
         {
             InitializeComponent();
            
-        }
-       
-
-       
+        }             
 
         private void ChartAll_Load(object sender, EventArgs e)
         {
@@ -205,9 +181,7 @@ namespace BA_Dashboard
             linechart.Location = new Point(0, 0);
             linechart.Show();
 
-
             m1.Click += new EventHandler(linechart1);
-
             m1.Checked = true;
 
 
@@ -226,10 +200,7 @@ namespace BA_Dashboard
             panel1.Controls.Add(gaugechart);
 
             gaugechart.Show();
-
-            gaugechart.Location = new Point(0, 193);
-
-            
+            gaugechart.Location = new Point(0, 193);         
 
             m3.Click += new EventHandler(gaugechart1);
             m3.Checked = true;
@@ -239,7 +210,6 @@ namespace BA_Dashboard
             panel1.Controls.Add(perchart);
 
             perchart.Show();
-
             perchart.Location = new Point(817, 193);
             
             m4.Click += new EventHandler(perchart1);
@@ -260,8 +230,8 @@ namespace BA_Dashboard
             panel1.Controls.Add(stcolchart);
 
             stcolchart.Show();
-
             stcolchart.Location = new Point(817, 386);
+            
             m6.Click += new EventHandler(stcolchart1);
             m6.Checked = true;
 
@@ -270,8 +240,8 @@ namespace BA_Dashboard
             panel1.Controls.Add(piechart);
 
             piechart.Show();
-
             piechart.Location = new Point(0, 579);
+
             m7.Click += new EventHandler(piechart1);
             m7.Checked = true;
         }
@@ -280,7 +250,7 @@ namespace BA_Dashboard
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
 
-            
+            //MessageBox.Show(ContextMenu.MenuItems.Count.ToString());
             if (e.Button == MouseButtons.Right)
             {
                 ContextMenu ctms = new ContextMenu(); //메뉴 스트립 추가
@@ -289,18 +259,19 @@ namespace BA_Dashboard
                 //ctms.MenuItems.Add("ChartList1");
                 ctms.Show(this, mousePoint);//마우스 클릭된 위치에 스트립 메뉴를 보여준다
 
-                //for (int i = 0; i < ContextMenu.MenuItems.Count; i++)
-                //{
-                //    if (ContextMenu.MenuItems[i].Checked == true)
-                //    {
-                        
-                //    }
-                //}
+               /* for (int i = 0; i < ContextMenu.MenuItems.Count; i++)
+                {
+                    if(ContextMenu.MenuItems[i]. == FormWindowState.Minimized)
+                    if (ContextMenu.MenuItems[i].Checked == true)
+                    {
+                        ContextMenu
+                    }
+                }*/
                 if (linechart.WindowState == FormWindowState.Minimized)
                 {
                     m1.Checked = false;
                     m0.Checked = false;
-                }
+                }                
                 if (columnchart.WindowState == FormWindowState.Minimized)
                 {
                     m2.Checked = false;
@@ -364,6 +335,8 @@ namespace BA_Dashboard
 
                 ctms.MenuItems.Add(m7);
                 panel1.ContextMenu = ctms;
+
+                //MessageBox.Show(ContextMenu.MenuItems.Count.ToString());
             }
         }
     }

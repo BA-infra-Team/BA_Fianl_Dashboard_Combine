@@ -70,8 +70,14 @@
     <Compile Include="Chart2.xaml.cs">
       <DependentUpon>Chart2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Chart2_2.xaml.cs">
+      <DependentUpon>Chart2_2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Chart3.xaml.cs">
       <DependentUpon>Chart3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Chart_3.xaml.cs">
+      <DependentUpon>Chart_3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Chart4.xaml.cs">
       <DependentUpon>Chart4.xaml</DependentUpon>
@@ -79,8 +85,14 @@
     <Compile Include="Chart5.xaml.cs">
       <DependentUpon>Chart5.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Chart5_2.xaml.cs">
+      <DependentUpon>Chart5_2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Chart6.xaml.cs">
       <DependentUpon>Chart6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Chart6_2.xaml.cs">
+      <DependentUpon>Chart6_2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Chart7.xaml.cs">
       <DependentUpon>Chart7.xaml</DependentUpon>
@@ -371,9 +383,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Chart2_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Chart3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Chart_3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Chart4.xaml">
       <SubType>Designer</SubType>
@@ -383,9 +403,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Chart5_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Chart6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Chart6_2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Chart7.xaml">
       <SubType>Designer</SubType>
