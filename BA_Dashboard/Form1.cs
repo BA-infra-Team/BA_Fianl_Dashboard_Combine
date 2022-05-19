@@ -143,7 +143,7 @@ namespace BA_Dashboard
             Chart_UC chart_UC = new Chart_UC();
             Error_UC error_UC = new Error_UC();
             Filtering_UC Filter_UC = new Filtering_UC();
-            
+            New_UC new_UC = new New_UC();
 
         }
         
@@ -443,6 +443,17 @@ namespace BA_Dashboard
                 //chartall.button2.Visible = true;
             }
             ContentPanel.Controls["ChartListAll"].BringToFront();*/
+        }
+
+        private void New_Btn_Click(object sender, EventArgs e)
+        {
+            if (!ContentPanel.Controls.ContainsKey("New_UC"))
+            {
+                New_UC new_UC = new New_UC();
+                new_UC.Dock = DockStyle.Fill;
+                ContentPanel.Controls.Add(new_UC);
+            }
+            ContentPanel.Controls["New_UC"].BringToFront();
         }
     }
 

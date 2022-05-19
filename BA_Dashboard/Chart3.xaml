@@ -24,7 +24,7 @@
                 <lvc:DefaultLegend BulletSize="20"/>
             </lvc:PieChart.ChartLegend>
             <lvc:PieChart.DataTooltip>
-                <lvc:DefaultTooltip BulletSize="20"/>
+                <lvc:DefaultTooltip BulletSize="20"  SelectionMode="OnlySender"/>
             </lvc:PieChart.DataTooltip>
         </lvc:PieChart>
 

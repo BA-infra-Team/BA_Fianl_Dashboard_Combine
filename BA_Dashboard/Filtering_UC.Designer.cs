@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Filtering_UC));
             this.FilterSecondTopPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.FilterContentPanel = new System.Windows.Forms.Panel();
             this.FilterListViewPanel = new System.Windows.Forms.Panel();
@@ -44,25 +42,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SearchComboBox = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.FilterSecondTopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.FilterContentPanel.SuspendLayout();
             this.FilterListViewPanel.SuspendLayout();
             this.FilterThirdTopPanel.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // FilterSecondTopPanel
             // 
             this.FilterSecondTopPanel.BackColor = System.Drawing.Color.White;
             this.FilterSecondTopPanel.Controls.Add(this.groupBox1);
-            this.FilterSecondTopPanel.Controls.Add(this.button8);
             this.FilterSecondTopPanel.Controls.Add(this.pictureBox2);
             this.FilterSecondTopPanel.Controls.Add(this.label2);
             this.FilterSecondTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FilterSecondTopPanel.Location = new System.Drawing.Point(0, 0);
             this.FilterSecondTopPanel.Name = "FilterSecondTopPanel";
-            this.FilterSecondTopPanel.Size = new System.Drawing.Size(1644, 62);
+            this.FilterSecondTopPanel.Size = new System.Drawing.Size(1920, 62);
             this.FilterSecondTopPanel.TabIndex = 3;
             // 
             // groupBox1
@@ -73,29 +71,6 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            // 
-            // button8
-            // 
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(1647, 19);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(42, 28);
-            this.button8.TabIndex = 9;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(20, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -115,7 +90,7 @@
             this.FilterContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FilterContentPanel.Location = new System.Drawing.Point(0, 62);
             this.FilterContentPanel.Name = "FilterContentPanel";
-            this.FilterContentPanel.Size = new System.Drawing.Size(1644, 839);
+            this.FilterContentPanel.Size = new System.Drawing.Size(1920, 839);
             this.FilterContentPanel.TabIndex = 4;
             // 
             // FilterListViewPanel
@@ -124,7 +99,7 @@
             this.FilterListViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FilterListViewPanel.Location = new System.Drawing.Point(0, 79);
             this.FilterListViewPanel.Name = "FilterListViewPanel";
-            this.FilterListViewPanel.Size = new System.Drawing.Size(1644, 760);
+            this.FilterListViewPanel.Size = new System.Drawing.Size(1920, 760);
             this.FilterListViewPanel.TabIndex = 1;
             // 
             // listView1
@@ -135,7 +110,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1644, 760);
+            this.listView1.Size = new System.Drawing.Size(1920, 760);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView1_DrawColumnHeader);
@@ -148,7 +123,7 @@
             this.FilterThirdTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FilterThirdTopPanel.Location = new System.Drawing.Point(0, 0);
             this.FilterThirdTopPanel.Name = "FilterThirdTopPanel";
-            this.FilterThirdTopPanel.Size = new System.Drawing.Size(1644, 79);
+            this.FilterThirdTopPanel.Size = new System.Drawing.Size(1920, 79);
             this.FilterThirdTopPanel.TabIndex = 0;
             // 
             // SearchBtn
@@ -171,7 +146,7 @@
             this.groupBox2.Controls.Add(this.SearchComboBox);
             this.groupBox2.Location = new System.Drawing.Point(4, -2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(522, 76);
+            this.groupBox2.Size = new System.Drawing.Size(798, 76);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -210,6 +185,17 @@
             this.SearchComboBox.TabIndex = 7;
             this.SearchComboBox.SelectedIndexChanged += new System.EventHandler(this.SearchComboBox_SelectedIndexChanged);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(20, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // Filtering_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -217,15 +203,15 @@
             this.Controls.Add(this.FilterContentPanel);
             this.Controls.Add(this.FilterSecondTopPanel);
             this.Name = "Filtering_UC";
-            this.Size = new System.Drawing.Size(1644, 901);
+            this.Size = new System.Drawing.Size(1920, 901);
             this.FilterSecondTopPanel.ResumeLayout(false);
             this.FilterSecondTopPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.FilterContentPanel.ResumeLayout(false);
             this.FilterListViewPanel.ResumeLayout(false);
             this.FilterThirdTopPanel.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,8 +219,6 @@
         #endregion
 
         private System.Windows.Forms.Panel FilterSecondTopPanel;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel FilterContentPanel;
         private System.Windows.Forms.Panel FilterThirdTopPanel;
@@ -247,5 +231,6 @@
         private System.Windows.Forms.ComboBox SearchComboBox;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

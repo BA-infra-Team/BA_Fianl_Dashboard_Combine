@@ -76,6 +76,9 @@
     <Compile Include="Chart3.xaml.cs">
       <DependentUpon>Chart3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Chart7_2.xaml.cs">
+      <DependentUpon>Chart7_2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Chart_3.xaml.cs">
       <DependentUpon>Chart_3.xaml</DependentUpon>
     </Compile>
@@ -193,11 +196,20 @@
     <Compile Include="LineChart.Designer.cs">
       <DependentUpon>LineChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="LineSeries_Chart.xaml.cs">
+      <DependentUpon>LineSeries_Chart.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="New_UC.Designer.cs">
+      <DependentUpon>New_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="PercentageStackedChart.cs">
       <SubType>Form</SubType>
@@ -270,6 +282,7 @@
     <Compile Include="StackedColumnChart.Designer.cs">
       <DependentUpon>StackedColumnChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="StringToSolidColorBrushConverter1.cs" />
     <Compile Include="TransparentPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -326,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_UC.resx">
+      <DependentUpon>New_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PercentageStackedChart.resx">
       <DependentUpon>PercentageStackedChart.cs</DependentUpon>
@@ -391,6 +407,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Chart7_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Chart_3.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -416,6 +436,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Chart7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LineSeries_Chart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

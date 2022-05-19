@@ -29,9 +29,6 @@ namespace BA_Dashboard
             UserName = ID_textbox.Text;
             Password = Pwd_textbox.Text;
 
-
-
-
             try
             {
 
@@ -127,6 +124,8 @@ namespace BA_Dashboard
                     else
                     {
                         MessageBox.Show("아이디 또는 비밀번호가 틀립니다.");
+                        ID_textbox.Text = "";
+                        Pwd_textbox.Text = "";
                         ClientSocket.Close();
                     }
                 }
@@ -134,6 +133,8 @@ namespace BA_Dashboard
                 else
                 {
                     MessageBox.Show("아이디 또는 비밀번호가 틀립니다.");
+                    ID_textbox.Text = "";
+                    Pwd_textbox.Text = "";
                     ClientSocket.Close();
                 }
             }

@@ -5,9 +5,18 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BA_Dashboard"
              mc:Ignorable="d"
-             d:DesignHeight="412" d:DesignWidth="830"
-             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" Foreground="Black">
-
+             d:DesignHeight="412" d:DesignWidth="830" d:DataContext="{d:DesignInstance local:Chart7}"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" Foreground="Black" SizeChanged="UserControl_SizeChanged">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="bvc"></BooleanToVisibilityConverter>
+        <local:StringToSolidColorBrushConverter1 x:Key="StringToSolidColorBrushConverter"></local:StringToSolidColorBrushConverter1>
+    </UserControl.Resources>
+    <UserControl.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="범례 가리기" IsCheckable="True" IsChecked="{Binding LegendVisibility}"/>
+            <MenuItem Header="Series_추가하기"/>
+        </ContextMenu>
+    </UserControl.ContextMenu>
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -18,13 +27,22 @@
         </Grid.ColumnDefinitions>
         <Label Grid.Column="1" Content="Schedule Ratio" HorizontalAlignment="Center" VerticalAlignment="Center" Height="43" Width="153" FontSize="18" FontWeight="Bold"/>
 
-
-        <lvc:PieChart Name="Chart" Grid.Row="1" Grid.Column="1"  Series="{Binding SeriesCollection}" 
+            <lvc:PieChart Name="Chart" Grid.Row="1" Grid.Column="1"
                       LegendLocation="Bottom" InnerRadius="15" Margin="10,5,10,5" FontWeight="Normal" Background="White">
+            <lvc:PieChart.Series>
+                <lvc:PieSeries Title="testsc_1" DataLabels="True" Values="{Binding Testsc_1_Values}" Fill="{Binding Testsc_1_Color}" FontSize="{Binding Font_Size}"/>
+                <lvc:PieSeries Title="testsc_2" DataLabels="True" Values="{Binding Testsc_2_Values}" Fill="{Binding Testsc_2_Color}" FontSize="{Binding Font_Size}"/>
+                <lvc:PieSeries Title="testsc_3" DataLabels="True" Values="{Binding Testsc_3_Values}" Fill="{Binding Testsc_3_Color}" FontSize="{Binding Font_Size}"/>
+                <lvc:PieSeries Title="testsc_4" DataLabels="True" Values="{Binding Testsc_4_Values}" Fill="{Binding Testsc_4_Color}" FontSize="{Binding Font_Size}"/>
+            </lvc:PieChart.Series>
+            <lvc:PieChart.DataTooltip>
+                <lvc:DefaultTooltip SelectionMode="OnlySender"></lvc:DefaultTooltip>
+            </lvc:PieChart.DataTooltip>
             <lvc:PieChart.ChartLegend>
-                <lvc:DefaultLegend BulletSize="10"></lvc:DefaultLegend>
+                <lvc:DefaultLegend BulletSize="10" Visibility="{Binding LegendVisibility, Converter={StaticResource bvc}}"></lvc:DefaultLegend>
             </lvc:PieChart.ChartLegend>
         </lvc:PieChart>
+
 
     </Grid>
 </UserControl>

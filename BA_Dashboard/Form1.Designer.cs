@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LeftSidePanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.New_Btn = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.ErrorBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.HomeBtn = new System.Windows.Forms.Button();
@@ -151,6 +153,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.New_Btn);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.ErrorBtn);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.HomeBtn);
@@ -161,9 +165,33 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(3, -7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(191, 316);
+            this.groupBox1.Size = new System.Drawing.Size(191, 374);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            // 
+            // New_Btn
+            // 
+            this.New_Btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("New_Btn.BackgroundImage")));
+            this.New_Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.New_Btn.FlatAppearance.BorderSize = 0;
+            this.New_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.New_Btn.Location = new System.Drawing.Point(18, 312);
+            this.New_Btn.Name = "New_Btn";
+            this.New_Btn.Size = new System.Drawing.Size(42, 28);
+            this.New_Btn.TabIndex = 9;
+            this.New_Btn.UseVisualStyleBackColor = true;
+            this.New_Btn.Click += new System.EventHandler(this.New_Btn_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(78, 319);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 21);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "new";
             // 
             // ErrorBtn
             // 
@@ -706,6 +734,8 @@
         private System.Windows.Forms.Integration.ElementHost elementHost1;
         private Chart1 chart11;
         public System.Windows.Forms.Panel ContentPanel;
+        private System.Windows.Forms.Button New_Btn;
+        private System.Windows.Forms.Label label8;
     }
 }
 

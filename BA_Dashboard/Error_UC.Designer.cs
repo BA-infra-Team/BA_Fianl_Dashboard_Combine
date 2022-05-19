@@ -30,23 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Error_UC));
             this.SecondTopPanel = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.chart31 = new BA_Dashboard.Chart3();
             this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
             this.chart41 = new BA_Dashboard.Chart4();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SecondTopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // SecondTopPanel
             // 
             this.SecondTopPanel.BackColor = System.Drawing.Color.White;
-            this.SecondTopPanel.Controls.Add(this.button8);
             this.SecondTopPanel.Controls.Add(this.pictureBox2);
             this.SecondTopPanel.Controls.Add(this.label2);
             this.SecondTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -54,29 +52,6 @@
             this.SecondTopPanel.Name = "SecondTopPanel";
             this.SecondTopPanel.Size = new System.Drawing.Size(1644, 62);
             this.SecondTopPanel.TabIndex = 8;
-            // 
-            // button8
-            // 
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(1647, 19);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(42, 28);
-            this.button8.TabIndex = 9;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(20, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -125,6 +100,17 @@
             this.elementHost2.Text = "elementHost2";
             this.elementHost2.Child = this.chart41;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(20, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // Error_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -135,21 +121,20 @@
             this.Size = new System.Drawing.Size(1644, 901);
             this.SecondTopPanel.ResumeLayout(false);
             this.SecondTopPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel SecondTopPanel;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
         private Chart3 chart31;
         private System.Windows.Forms.Integration.ElementHost elementHost2;
         private Chart4 chart41;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
