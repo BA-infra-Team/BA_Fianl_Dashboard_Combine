@@ -12,7 +12,6 @@
     <UserControl.Resources>
         <zoomingAndPanning:ZoomingModeCoverter x:Key="ZoomingModeCoverter"></zoomingAndPanning:ZoomingModeCoverter>
     </UserControl.Resources>
-
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />

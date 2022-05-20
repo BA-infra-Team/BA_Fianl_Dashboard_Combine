@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Windows;
 using System.Globalization;
 using System.Windows.Data;
+using System.Windows.Media;
 
 namespace BA_Dashboard
 {
@@ -38,7 +39,8 @@ namespace BA_Dashboard
                                                         ChartData.Total_File_Size_LineChart_2022_02_15_Count
                     },
                     PointGeometry = DefaultGeometries.Circle,
-                    PointGeometrySize = 10
+                    PointGeometrySize = 10,
+                    Fill = new SolidColorBrush() { Opacity = 0.15, Color = Brushes.Red.Color }
                 },
                  new LineSeries
                 {
@@ -53,7 +55,8 @@ namespace BA_Dashboard
                                                         ChartData.Total_Write_Size_LineChart_2022_02_15_Count
                     },
                     PointGeometry = DefaultGeometries.Circle,
-                    PointGeometrySize = 10
+                    PointGeometrySize = 10,
+                    Fill = new SolidColorBrush() { Opacity = 0.15, Color = Brushes.Blue.Color }
                 },
 
                   new LineSeries
@@ -69,10 +72,9 @@ namespace BA_Dashboard
                                                         ChartData.Total_Data_Transferred_LineChart_2022_02_15_Count
                     },
                     PointGeometry = DefaultGeometries.Circle,
-                    PointGeometrySize = 10
+                    PointGeometrySize = 10,
+                    Fill = new SolidColorBrush() { Opacity = 0.15, Color = Brushes.Yellow.Color }
                 },
-
-
             };
 
             // X축 Zooming Mode 변수 
@@ -178,7 +180,8 @@ namespace BA_Dashboard
         }
         #endregion
     }
-#endregion
+    #endregion
+
     #region 줌 모드 컨버터 
     public class ZoomingModeCoverter : IValueConverter
     {

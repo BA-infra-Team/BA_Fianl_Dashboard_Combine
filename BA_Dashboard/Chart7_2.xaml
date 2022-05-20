@@ -9,7 +9,8 @@
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" Foreground="Black">
     <UserControl.ContextMenu>
         <ContextMenu>
-            <MenuItem Header="Series_추가하기" Click="MenuItem_Click"/>
+            <MenuItem Header="Series_추가하기" Click="DataAdd_Click"/>
+            <MenuItem Header="Series_제거하기" Click="DataRemove_Click"/>
         </ContextMenu>
     </UserControl.ContextMenu>
     <Grid Background="White">

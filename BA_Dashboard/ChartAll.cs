@@ -159,10 +159,6 @@ namespace BA_Dashboard
             }
 
         }
-
-
-        Point point = new Point();
-
         public ChartAll()
         {
             InitializeComponent();
@@ -249,24 +245,13 @@ namespace BA_Dashboard
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-
-            //MessageBox.Show(ContextMenu.MenuItems.Count.ToString());
             if (e.Button == MouseButtons.Right)
             {
                 ContextMenu ctms = new ContextMenu(); //메뉴 스트립 추가
                 Point mousePoint = new Point(e.X, e.Y); //마우스가 클릭된 위치
-                //ctms.MenuItems.Add("All");//아이템 추가
-                //ctms.MenuItems.Add("ChartList1");
+
                 ctms.Show(this, mousePoint);//마우스 클릭된 위치에 스트립 메뉴를 보여준다
 
-               /* for (int i = 0; i < ContextMenu.MenuItems.Count; i++)
-                {
-                    if(ContextMenu.MenuItems[i]. == FormWindowState.Minimized)
-                    if (ContextMenu.MenuItems[i].Checked == true)
-                    {
-                        ContextMenu
-                    }
-                }*/
                 if (linechart.WindowState == FormWindowState.Minimized)
                 {
                     m1.Checked = false;
@@ -306,37 +291,41 @@ namespace BA_Dashboard
 
                 ctms.MenuItems.Add(m0);
                 panel1.ContextMenu = ctms;
-
                 
                 ctms.MenuItems.Add(m1);
                 panel1.ContextMenu = ctms;
-
  
                 ctms.MenuItems.Add(m2);
                 panel1.ContextMenu = ctms;
-
                 
                 ctms.MenuItems.Add(m3);
                 panel1.ContextMenu = ctms;
-
-
                 
                 ctms.MenuItems.Add(m4);
                 panel1.ContextMenu = ctms;
 
-
                 ctms.MenuItems.Add(m5);
                 panel1.ContextMenu = ctms;
-
 
                 ctms.MenuItems.Add(m6);
                 panel1.ContextMenu = ctms;
 
-
                 ctms.MenuItems.Add(m7);
                 panel1.ContextMenu = ctms;
 
-                //MessageBox.Show(ContextMenu.MenuItems.Count.ToString());
+                //모두 체크시 all Checked
+                int count = 0;
+                for(int i = 1; i < ctms.MenuItems.Count; i++)
+                {
+                    if (ctms.MenuItems[i].Checked == true)
+                    {
+                        count++;
+                    }
+                }
+                if(count == ctms.MenuItems.Count -1)
+                {
+                    m0.Checked = true;
+                }
             }
         }
     }

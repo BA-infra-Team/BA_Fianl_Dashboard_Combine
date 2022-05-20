@@ -19,9 +19,14 @@
             <MenuItem Header="파일_라인_Visible" IsCheckable="True" IsChecked="{Binding FileSizeSeriesVisibility, Mode=TwoWay}"/>
             <MenuItem Header="저장_라인_Visible" IsCheckable="True" IsChecked="{Binding WriteSizeSeriesVisibility, Mode=TwoWay}"/>
             <MenuItem Header="전송_라인_Visible" IsCheckable="True" IsChecked="{Binding TransferredVisibility, Mode=TwoWay}"/>
-            <MenuItem Header="All Visible" IsCheckable="True" IsChecked="{Binding AllVisibility}" Click="AllVisibility_Converter"/>
-            <MenuItem Header="파일_라인_색깔변경" IsCheckable="True" IsChecked="{Binding ColorToggle}" Click="File_Color_Click"/>
+            <MenuItem Header="All Visible" IsCheckable="True" IsChecked="{Binding AllVisibility, Mode=TwoWay}" Click="AllVisibility_Converter" />
+            <Separator></Separator>
+            <MenuItem Header="파일_라인_색깔변경" IsCheckable="True" IsChecked="{Binding FileColorToggle, Mode=TwoWay}" Click="File_Color_Click"/>
+            <MenuItem Header="저장_라인_색깔변경" IsCheckable="True" IsChecked="{Binding WriteColorToggle, Mode=TwoWay}" Click="Write_Color_Click"/>
+            <MenuItem Header="전송_라인_색깔변경" IsCheckable="True" IsChecked="{Binding TransColorToggle, Mode=TwoWay}" Click="Trans_Color_Click"/>
+            <Separator></Separator>
             <MenuItem Header="데이터추가" Click="Data_Add_Click"/>
+            <MenuItem Header="데이터제거" Click="Data_Remove_Click"/>
         </ContextMenu>
     </UserControl.ContextMenu>
 
@@ -52,8 +57,8 @@
             </lvc:CartesianChart.ChartLegend>
             <lvc:CartesianChart.Series>
                 <lvc:LineSeries Title="File_Size" Values="{Binding File_Size_Values}" Visibility="{Binding FileSizeSeriesVisibility, Converter={StaticResource bvc}}" Fill="{Binding FileColorString, Converter={StaticResource StringToSolidColorBrushConverter}}"/>
-                <lvc:LineSeries Title="Write_Size" Values="{Binding Write_Size_Values}" Visibility="{Binding WriteSizeSeriesVisibility, Converter={StaticResource bvc}}"/>
-                <lvc:LineSeries Title="Trans_Size" Values="{Binding Transferred_Values}" Visibility="{Binding TransferredVisibility, Converter={StaticResource bvc}}"/>
+                <lvc:LineSeries Title="Write_Size" Values="{Binding Write_Size_Values}" Visibility="{Binding WriteSizeSeriesVisibility, Converter={StaticResource bvc}}" Fill="{Binding WriteColorString, Converter={StaticResource StringToSolidColorBrushConverter}}"/>
+                <lvc:LineSeries Title="Trans_Size" Values="{Binding Transferred_Values}" Visibility="{Binding TransferredVisibility, Converter={StaticResource bvc}}" Fill="{Binding TransColorString, Converter={StaticResource StringToSolidColorBrushConverter}}"/>
             </lvc:CartesianChart.Series>
             <lvc:CartesianChart.AxisY>
                 <lvc:Axis Title="GB" LabelFormatter="{Binding YFormatter}"></lvc:Axis>

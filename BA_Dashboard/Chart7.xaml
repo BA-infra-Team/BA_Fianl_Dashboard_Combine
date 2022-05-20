@@ -11,12 +11,6 @@
         <BooleanToVisibilityConverter x:Key="bvc"></BooleanToVisibilityConverter>
         <local:StringToSolidColorBrushConverter1 x:Key="StringToSolidColorBrushConverter"></local:StringToSolidColorBrushConverter1>
     </UserControl.Resources>
-    <UserControl.ContextMenu>
-        <ContextMenu>
-            <MenuItem Header="범례 가리기" IsCheckable="True" IsChecked="{Binding LegendVisibility}"/>
-            <MenuItem Header="Series_추가하기"/>
-        </ContextMenu>
-    </UserControl.ContextMenu>
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
